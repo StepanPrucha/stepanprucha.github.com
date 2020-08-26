@@ -1,0 +1,102 @@
+html {
+  background-color: #cccccc;
+  color: #333333;
+  background-image: url("https://i.ibb.co/fV3HBdh/2020-background-stepan-prucha.png");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+}
+
+h1, h2, h3, h6, p, a {  
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.5em;
+  margin: 1rem 0;
+}
+
+h1 {
+  font-size: calc(1em + 1.5vw) ;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 1.5rem ;
+  font-weight: 300;
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+h6 {
+  font-size: 0.5rem;
+  font-weight: 600;
+  color: #999999;
+  margin: auto 0;
+}
+
+a:link, a:visited {
+  color: #0099ff;
+  text-decoration: none;
+}
+
+a:hover, a:active {
+  color: #33abff;
+  text-decoration: none;
+}
+
+.darklink a:link, .darklink a:visited, #menu a:link, #menu a:visited {
+  color: #333333;
+}
+
+.darklink a:hover, .darklink a:active, #menu a:hover, #menu a:active {
+  color: #33abff;
+}
+
+.darklink {
+  margin: auto;
+}
+
+.slide {
+  display: inline-block;
+  width: 100vw;
+}
+
+.space {
+  display: flex;
+  height: 12.5vh;
+  width: 100vw;
+  padding: 0 6.25vw;
+}
+
+.content {
+  display: flex;
+  min-height: 75vh;
+  background-color: #eeeeee;
+  margin: 0;
+  padding: 0;
+}
+
+.img {
+  display: flex;
+  width: 46.875vw;
+  background-color: #dddddd;
+  padding: 6.25vw;
+}
+
+.text {
+  display: inline;
+  width: 53.125vw;
+  margin: auto 0 0 0;
+  padding: 6.25vw;
+}
