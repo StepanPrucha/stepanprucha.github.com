@@ -1,14 +1,8 @@
-jQuery(document).ready(function($){
-    var $root = $('html, body');
-    $('a[href^="#"]').click(function() {
-        var href = $.attr(this, 'href');
-        $root.animate({
-            scrollTop: $(href).offset().top
-        }, 500, function () {
-            window.location.hash = href;
-        });
-         
-        return false;
-    });
- 
-})
+$('a[href^="#"]').click(function(e){
+  e.preventDefault();
+  var target = $($(this).attr('href'));
+  if(target.length){
+    var scrollTo = target.offset().top;
+    $('body, html').animate({scrollTop: scrollTo+'px'}, 500);
+  }
+});

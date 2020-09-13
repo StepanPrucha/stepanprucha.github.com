@@ -1,102 +1,245 @@
 html {
   background-color: #cccccc;
-  color: #333333;
-  background-image: url("https://i.ibb.co/fV3HBdh/2020-background-stepan-prucha.png");
+  background: url("https://i.ibb.co/fV3HBdh/2020-background-stepan-prucha.png");
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-  font-size: 16px;
-}
-
-body {
-  margin: 0;
-}
-
-h1, h2, h3, h6, p, a {  
-  font-family: 'Open Sans', sans-serif;
-  line-height: 1.5em;
-  margin: 1rem 0;
-}
-
-h1 {
-  font-size: calc(1em + 1.5vw) ;
-  font-weight: 600;
-}
-
-h2 {
-  font-size: 1.5rem ;
-  font-weight: 300;
-}
-
-h3 {
-  font-size: 1.25rem;
-  font-weight: 400;
-}
-
-p {
-  font-size: 1rem;
-  font-weight: 400;
-}
-
-h6 {
-  font-size: 0.5rem;
-  font-weight: 600;
-  color: #999999;
-  margin: auto 0;
-}
-
-a:link, a:visited {
-  color: #0099ff;
-  text-decoration: none;
-}
-
-a:hover, a:active {
-  color: #33abff;
-  text-decoration: none;
-}
-
-.darklink a:link, .darklink a:visited, #menu a:link, #menu a:visited {
+  font-size: calc(0.875rem + 0.33vw);
   color: #333333;
 }
 
-.darklink a:hover, .darklink a:active, #menu a:hover, #menu a:active {
-  color: #33abff;
+body {
+  margin: 0 2vw;
 }
 
-.darklink {
+header, .footer {
+  display: flex;
+  margin: 0;
+  width: 100%;
+}
+
+header {
+  min-height: calc(76vh - 3.75rem); 
+}
+
+.footer {
+  min-height: calc(68vh - 4.5rem);
+}
+
+header, footer, .footer {
+  text-align: center;
+}
+
+h1, h2, h3, h4, p, li, .button {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.5em;
+  margin: 4vh 8vw;
+  letter-spacing: 0.025em;
+}
+
+.title {
   margin: auto;
 }
 
-.slide {
-  display: inline-block;
-  width: 100vw;
+h1 {
+  font-size: 1.75em;
+  font-weight: 200;
 }
 
-.space {
-  display: flex;
-  height: 12.5vh;
-  width: 100vw;
-  padding: 0 6.25vw;
+h2 {
+  font-size: 1.5em;
+  font-weight: 500;
 }
 
-.content {
+h3 {
+  font-size: 1.25em;
+  font-weight: 200;
+  margin: 4vh 8vw 8vh 8vw;
+}
+
+.dark {
+  margin: 3vh 8vw;
+}
+
+.dark2 {
+  margin: 6vh 8vw 4vh 8vw;
+}
+
+p, li {
+  font-weight: 300;
+}
+
+.nm {
+  margin: 2vh 8vw;
+}
+
+h4 {
+  font-size: 0.75em;
+  font-weight: 400;
+}
+
+a, a:link, a:visited {
+  color: #777777;
+  text-decoration: underline;
+  font-weight: 400;
+}
+
+a:hover, a:active {
+  color: #33aaff;
+}
+
+.dark a:link, .dark a:visited, .light a:link, .light a:visited {
+  color: #777777;
+  font-weight: 300;
+  text-decoration: none;
+}
+
+.light a:link, .light a:visited {
+  color: #eeeeee;
+}
+
+.dark a:hover, .dark a:active, .light a:hover, .light a:active {
+  color: #33aaff;
+}
+
+strong {
+  font-weight: 400;
+}
+
+.slide, .slide2, .sb, .banner {
   display: flex;
-  min-height: 75vh;
+  flex-wrap: wrap;
+  margin: auto;
+  min-height: calc(84vh - 2.5rem);
   background-color: #eeeeee;
+}
+
+.slide2 {
+  flex-wrap: wrap-reverse;
+}
+
+.sb, .banner {
+  background-color: #999999;
+  color: #eeeeee;
+}
+
+.page {
+  background: #eeeeee;
+  
+}
+
+.banner {
+  display: flex;
   margin: 0;
-  padding: 0;
+  text-align: center;
+}
+
+#main {
+  border-radius: 1.5rem 1.5rem 0 0;
+}
+
+.button {
+  display: inline-block;
+  text-decoration: none !important;
+  background-color: #eeeeee;
+  color: #777777;
+  padding: 0.5rem 3rem;
+  font-weight: 300;
+  font-size: 1.125rem;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #33aaff;
+  color: #eeeeee;
+}
+
+.page, .slide, .slide2, .sb, .button {
+  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.125);
+  border-radius: 1.5rem;
+}
+
+.slide, .slide2, .sb {
+  overflow: hidden;
+}
+
+.text {
+  width: 100vw;
+  margin: auto 0 0 0;
+  padding: 6vh 0;
 }
 
 .img {
   display: flex;
-  width: 46.875vw;
-  background-color: #dddddd;
-  padding: 6.25vw;
+  width: 100vw;
+  min-height: 33vh;
 }
 
-.text {
-  display: inline;
-  width: 53.125vw;
-  margin: auto 0 0 0;
-  padding: 6.25vw;
+.space {
+  height: calc(8vh + 1.25rem);
+}
+
+.line {
+  margin: 12vh 6vw;
+  height: 0.04rem;
+  background-color: #cccccc;
+}
+
+.sticky {
+  display: flex;
+  position: sticky;
+  -webkit-position: sticky;
+  top: 0;
+  background-color: #eeeeee;
+  padding: 0;
+  border-radius: 0 0 1.5rem 1.5rem;
+}
+
+li {
+  padding: 0 0 0 2vw;
+}
+
+@media only screen and (min-width: 720px) {
+
+  body {
+  width: 84vw;
+  margin: auto;
+  }
+  
+  h1 {
+  font-size: 2.25em;
+  }
+  
+  .slide {
+  flex-wrap: nowrap;
+  }
+  
+  .text {
+    margin: auto 0 0 auto;
+    width: 46vw;
+  }
+  
+  .text2 {
+    margin: auto 0 0 0;
+  }
+  
+  .img {
+    width: 38vw;
+  }
+  
+}
+
+@media only screen and (max-width: 360px) {
+  
+  .button {
+    padding: 0.5rem 1.5rem;
+  }
+  
+}
+
+a, a:link, a:visited, a:hover, a:active, .button, .button:hover {
+    -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
