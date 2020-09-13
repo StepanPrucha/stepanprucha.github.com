@@ -142,7 +142,8 @@ strong {
 
 .button {
   display: inline-block;
-  text-decoration: none;
+  margin: 0 8vw;
+  text-decoration: none !important;
   background-color: #eeeeee;
   color: #777777;
   padding: 0.5rem 3rem;
