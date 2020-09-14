@@ -102,33 +102,26 @@ h4 {
   font-size: 0.75em;
 }
 
-a, a:link {
+a, a:link, a:visited, a:active {
   color: #777777;
+}
+
+a, a:link {
   text-decoration: underline;
   font-weight: 600;
 }
 
-.dark a:link {
+.dark a:link, .light a:link {
   font-weight: 400;
   text-decoration: none;
 }
 
-.light a:link {
-  font-weight: 400;
+.light a:link, .light a:visited, .light a:active {
   color: #eeeeee;
-  text-decoration: none;
 }
 
-a:hover, .dark a:hover, .light a:hover {
+a:hover {
   color: #33aaff;
-}
-
-a:visited, a:active, .dark a:visited, .dark a:active {
-  color: #777777;
-}
-
-.light a:visited, .light a:active {
-  color: #eeeeee;
 }
 
 strong {
@@ -199,7 +192,7 @@ li {
   }
   
   h1 {
-  font size: 3em;
+  font-size: 3em;
   }
   
   .slide {
