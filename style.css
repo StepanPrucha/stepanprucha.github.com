@@ -120,7 +120,7 @@ a, a:link {
   color: #eeeeee;
 }
 
-a:hover {
+a:hover, .light a:hover {
   color: #33aaff;
 }
 
