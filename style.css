@@ -80,13 +80,13 @@ h4 {
   font-weight: 400;
 }
 
-a, a:link, a:visited {
+a:link, a:visited, a:active {
   color: #777777;
   text-decoration: underline;
   font-weight: 400;
 }
 
-a:hover, a:active {
+a:hover {
   color: #33aaff;
 }
 
