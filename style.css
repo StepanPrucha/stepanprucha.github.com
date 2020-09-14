@@ -90,17 +90,19 @@ a:hover, a:active {
   color: #33aaff;
 }
 
-.dark a:link, .dark a:visited, .light a:link, .light a:visited {
+.dark a:link, .dark a:visited, .dark a:active {
   color: #777777;
   font-weight: 300;
   text-decoration: none;
 }
 
-.light a:link, .light a:visited {
+.light a:link, .light a:visited, .light a:active {
   color: #eeeeee;
+  font-weight: 300;
+  text-decoration: none;
 }
 
-.dark a:hover, .dark a:active, .light a:hover, .light a:active {
+.dark a:hover, .light a:hover,  {
   color: #33aaff;
 }
 
