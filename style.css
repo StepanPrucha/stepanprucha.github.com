@@ -28,7 +28,7 @@ header, footer, .banner, .slide, .slide2, .sb {
 }
 
 header, footer, .copyright, .slide, .slide2, .sb, .page {
-  width: calc(100vw - 2.25rem);
+  width: calc(100vw - 1.125rem);
   margin: 0 auto;
 }
 
