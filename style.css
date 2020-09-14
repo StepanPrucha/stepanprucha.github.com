@@ -1,6 +1,6 @@
 html {
   font-size: calc(0.875rem + 0.33vw);
-  width: 100vw;
+  width: 100%;
   background-color: #cccccc;
   background: url("https://i.ibb.co/fV3HBdh/2020-background-stepan-prucha.png");
   background-repeat: no-repeat;
@@ -11,7 +11,7 @@ html {
 }
 
 body {
-  width: 100vw;
+  width: 100%;
   padding: 0;
 }
 
