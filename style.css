@@ -8,7 +8,7 @@ html {
 
 body {
   margin: 0;
-  padding: 0 2vw;
+  padding: 0 2.5vw;
 }
 
 
@@ -44,7 +44,7 @@ h1, h2, h3, h4, p, li, .button {
 }
 
 h1 {
-  font-size: 1.75em;
+  font-size: 2em;
   font-weight: 200;
 }
 
@@ -111,7 +111,7 @@ strong {
 }
 
 .slide, .slide2, .sb, .page {
-  width: 96vw;
+  width: 95vw;
   margin: 0 auto;
 }
 
@@ -201,10 +201,6 @@ li {
   
   .slide, .slide2, .sb, .page {
   width: 84vw;
-  }
-  
-  h1 {
-  font-size: 2.25em;
   }
   
   .slide {
