@@ -29,16 +29,16 @@ header, footer, .banner, .slide, .slide2, .sb {
   background: #eeeeee;
 }
 
-header {
-  min-height: calc(76vh - 5.625em); 
+header, .banner {
+  min-height: calc(68vh - 7.5em); 
 }
 
 footer {
   min-height: calc(68vh - 6.75em);
 }
 
-.slide, .slide2, .sb, .banner {
-  min-height: calc(84vh - 3.75em);
+.slide, .slide2, .sb {
+  min-height: calc(92vh - 1.875em);
 }
 
 .slide2 {
