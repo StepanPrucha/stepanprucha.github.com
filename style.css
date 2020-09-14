@@ -64,7 +64,7 @@ header, footer, .copyright, .banner {
 
 h1, h2, h3, h4, p, li, .button {
   margin: 4vh 8vw;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   line-height: 1.5em;
   font-weight: 400;
   letter-spacing: 0.025em;
@@ -76,7 +76,7 @@ h1 {
 
 h2 {
   font-size: 1.5em;
-  font-weight: 500;
+  font-weight: 700;
 }
 
 h3 {
@@ -104,7 +104,7 @@ h4 {
 a, a:link {
   color: #777777;
   text-decoration: underline;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .dark a:link {
@@ -129,7 +129,7 @@ a:visited, a:active, .dark a:visited, .dark a:active {
 }
 
 strong {
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .button {
