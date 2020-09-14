@@ -1,9 +1,10 @@
 html {
   background-color: #cccccc;
   background: url("https://i.ibb.co/fV3HBdh/2020-background-stepan-prucha.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   background-position: center;
   background-size: cover;
-  background-attachment: fixed;
   font-size: calc(0.875rem + 0.33vw);
   color: #333333;
 }
