@@ -8,7 +8,7 @@ html {
 
 body {
   margin: 0;
-  padding: 1.125em;
+  padding: 0 1.125em;
 }
 
 .space {
@@ -180,7 +180,7 @@ li {
   }
   
 body {
-  padding: 5vw;
+  padding: 0 5vw;
 }
   
   h1 {
