@@ -13,10 +13,6 @@ body {
   padding: 0;
 }
 
-html, body {
-  width: 100%;
-}
-
 .space {
   height: calc(8vh + 1.875rem);
 }
