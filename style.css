@@ -1,24 +1,24 @@
 html {
+  margin: 0;
+  padding: 0;
   font-size: calc(0.875rem + 0.33vw);
-  background-color: #cccccc;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
+  background: linear-gradient(0deg,rgba(204,204,204,1),rgba(187, 187, 187, 1));
   color: #333333;
 }
 
-html, body {
+body {
   margin: 0;
-  padding: 0;
+  padding: 0 2vw;
 }
+
 
 .space {
   height: calc(8vh + 1.875rem);
 }
 
-header, .footer {
+header, .footer, footer {
   display: flex;
+  text-align: center;
 }
 
 header {
@@ -27,10 +27,6 @@ header {
 
 .footer {
   min-height: calc(68vh - 6.75rem);
-}
-
-header, footer, .footer {
-  text-align: center;
 }
 
 h1, h2, h3, h4, p, li, .button {
@@ -56,7 +52,7 @@ h2 {
 
 h3 {
   font-size: 1.25em;
-  font-weight: 200;
+  font-weight: 300;
   margin: 4vh 8vw 6vh 8vw;
 }
 
@@ -111,10 +107,14 @@ strong {
   font-weight: 400;
 }
 
+.slide, .slide2, .sb, .page {
+  width: 96vw;
+  margin: 0 auto;
+}
+
 .slide, .slide2, .sb, .banner {
   display: flex;
   flex-wrap: wrap;
-  margin: auto;
   min-height: calc(84vh - 3.75rem);
   background-color: #eeeeee;
 }
@@ -135,12 +135,11 @@ strong {
 
 .banner {
   display: flex;
-  margin: 0;
   text-align: center;
 }
 
 .main {
-  border-radius: 1.5rem 1.5rem 0 0;
+  border-radius: 2rem 2rem 0 0;
 }
 
 .button {
@@ -162,22 +161,18 @@ strong {
 
 .page, .slide, .slide2, .sb, .button {
   box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.125);
-  border-radius: 1.5rem;
-}
-
-.slide, .slide2, .sb {
-  overflow: hidden;
+  border-radius: 2rem;
 }
 
 .text {
-  width: 100vw;
+  width: 100%;
   margin: auto 0 0 0;
   padding: 6vh 0;
 }
 
 .img {
   display: flex;
-  width: 100vw;
+  width: 100%;
   min-height: 33vh;
 }
 
@@ -195,10 +190,14 @@ li {
   padding: 0 0 0 2vw;
 }
 
-@media only screen and (min-width: 960px) {
+@media only screen and (min-width: 840px) {
 
   body {
   padding: 0 8vw;
+  }
+  
+  .slide, .slide2, .sb, .page {
+  width: 84vw;
   }
   
   h1 {
