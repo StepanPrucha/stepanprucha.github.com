@@ -86,12 +86,9 @@ a:link, a:visited, a:active {
   font-weight: 400;
 }
 
-a:hover {
-  color: #33aaff;
-}
+
 
 .dark a:link, .dark a:visited, .dark a:active {
-  color: #777777;
   font-weight: 300;
   text-decoration: none;
 }
@@ -102,7 +99,7 @@ a:hover {
   text-decoration: none;
 }
 
-.dark a:hover, .light a:hover,  {
+a:hover {
   color: #33aaff;
 }
 
