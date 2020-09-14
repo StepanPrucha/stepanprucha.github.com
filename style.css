@@ -119,7 +119,7 @@ a, a:link {
   text-decoration: none;
 }
 
-a:hover {
+a:hover, .dark a:hover, .light a:hover {
   color: #33aaff;
 }
 
