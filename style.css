@@ -1,16 +1,18 @@
-html, body {
+html {
   margin: 0;
   padding: 0;
-}
-
-html {
   font-size: 1em;
   background-color: #cccccc;
   color: #333333;
 }
 
+body {
+  margin: 0;
+  padding: 1.125em;
+}
+
 .space {
-  height: calc(8vh + 1.875rem);
+  height: calc(8vh + 1.875em);
 }
 
 header, footer, .banner, .slide, .slide2, .sb {
@@ -27,21 +29,16 @@ header, footer, .banner, .slide, .slide2, .sb {
   background: #eeeeee;
 }
 
-header, footer, .copyright, .slide, .slide2, .sb, .page {
-  width: calc(100vw - 1.125rem);
-  margin: 0 auto;
-}
-
 header {
-  min-height: calc(76vh - 5.625rem); 
+  min-height: calc(76vh - 5.625em); 
 }
 
 footer {
-  min-height: calc(68vh - 6.75rem);
+  min-height: calc(68vh - 6.75em);
 }
 
 .slide, .slide2, .sb, .banner {
-  min-height: calc(84vh - 3.75rem);
+  min-height: calc(84vh - 3.75em);
 }
 
 .slide2 {
@@ -58,7 +55,7 @@ header, footer, .copyright, .banner {
 
 
 .main {
-  border-radius: 2rem 2rem 0 0;
+  border-radius: 2em 2em 0 0;
 }
 
 
@@ -136,7 +133,7 @@ strong {
   color: #777777;
   padding: 0.5rem 3rem;
   font-weight: 300;
-  font-size: 1.125rem;
+  font-size: 1.125em;
   cursor: pointer;
 }
 
@@ -146,8 +143,8 @@ strong {
 }
 
 .page, .slide, .slide2, .sb, .button {
-  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.125);
-  border-radius: 2rem;
+  box-shadow: 0 0.5em 1em 0 rgba(0, 0, 0, 0.125);
+  border-radius: 2em;
 }
 
 .text {
@@ -169,7 +166,7 @@ strong {
   top: 0;
   background-color: #eeeeee;
   padding: 0;
-  border-radius: 0 0 1.5rem 1.5rem;
+  border-radius: 0 0 2em 2em;
 }
 
 li {
@@ -179,17 +176,12 @@ li {
 @media only screen and (min-width: 800px) {
 
   html {
-    font-size: calc(0.875rem + 0.25vw);
+    font-size: calc(0.875em + 0.25vw);
   }
   
-  body {
-  padding: 0 8vw;
-  }
-  
-  header, footer, .copyright, .slide, .slide2, .sb, .page {
-    width: 84vw;
-    margin: 0 auto;
-  }
+body {
+  padding: 5vw;
+}
   
   h1 {
   font-size: 3em;
@@ -201,7 +193,7 @@ li {
   
   .text {
     margin: auto 0 0 auto;
-    width: 46vw;
+    width: 49vw;
   }
   
   .text2 {
@@ -209,7 +201,7 @@ li {
   }
   
   .img {
-    width: 38vw;
+    width: 31vw;
   }
   
 }
@@ -217,7 +209,7 @@ li {
 @media only screen and (max-width: 360px) {
   
   html {
-    font-size: 0.75rem;
+    font-size: 0.75em;
   }
   
   .button {
