@@ -63,15 +63,15 @@ header, footer, .copyright, .banner {
 
 
 h1, h2, h3, h4, p, li, .button {
+  margin: 4vh 8vw;
   font-family: 'Poppins', sans-serif;
   line-height: 1.5em;
-  margin: 4vh 8vw;
+  font-weight: 400;
   letter-spacing: 0.025em;
 }
 
 h1 {
   font-size: 2em;
-  font-weight: 200;
 }
 
 h2 {
@@ -93,33 +93,26 @@ h3 {
   margin: 6vh 8vw 4vh 8vw;
 }
 
-p, li {
-  font-weight: 300;
-}
-
 .nm {
   margin: 2vh 8vw;
 }
 
 h4 {
   font-size: 0.75em;
-  font-weight: 400;
 }
 
 a, a:link, a:visited, a:active {
   color: #777777;
   text-decoration: underline;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .dark a:link, .dark a:visited, .dark a:active {
-  font-weight: 300;
   text-decoration: none;
 }
 
 .light a:link, .light a:visited, .light a:active {
   color: #eeeeee;
-  font-weight: 300;
   text-decoration: none;
 }
 
@@ -128,7 +121,7 @@ a:hover {
 }
 
 strong {
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .button {
