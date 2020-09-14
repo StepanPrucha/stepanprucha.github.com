@@ -108,10 +108,12 @@ a, a:link {
 }
 
 .dark a:link {
+  font-weight: 400;
   text-decoration: none;
 }
 
 .light a:link {
+  font-weight: 400;
   color: #eeeeee;
   text-decoration: none;
 }
