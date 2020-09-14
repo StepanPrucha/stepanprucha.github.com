@@ -4,7 +4,7 @@ html, body {
 }
 
 html {
-  font-size: 1rem;
+  font-size: 1em;
   background-color: #cccccc;
   color: #333333;
 }
@@ -101,23 +101,31 @@ h4 {
   font-size: 0.75em;
 }
 
-a, a:link, a:visited, a:active {
+a, a:link {
   color: #777777;
   text-decoration: underline;
   font-weight: 500;
 }
 
-.dark a:link, .dark a:visited, .dark a:active {
+.dark a:link {
   text-decoration: none;
 }
 
-.light a:link, .light a:visited, .light a:active {
+.light a:link {
   color: #eeeeee;
   text-decoration: none;
 }
 
 a:hover {
   color: #33aaff;
+}
+
+a:visited, a:active, .dark a:visited, .dark a:active {
+  color: #777777;
+}
+
+.light a:visited, .light a:active {
+  color: #eeeeee;
 }
 
 strong {
