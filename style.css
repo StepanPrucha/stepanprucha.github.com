@@ -1,46 +1,72 @@
-html {
+html, body {
   margin: 0;
   padding: 0;
+}
+
+html {
   font-size: calc(0.9rem + 0.25vw);
   background-color: #cccccc;
   color: #333333;
 }
 
-body {
-  margin: 0;
-  padding: 0 2.5vw;
-}
-
-
 .space {
   height: calc(8vh + 1.875rem);
 }
 
-header, .footer {
+header, footer, .banner, .slide, .slide2, .sb {
   display: flex;
+  flex-wrap: wrap;
 }
 
-header, .footer, footer {
-  text-align: center;
+.sb, .banner {
+  background-color: #999999;
+  color: #eeeeee;
+}
+
+.slide, .slide2, .page {
+  background: #eeeeee;
+}
+
+header, footer, .copyright, .slide, .slide2, .sb, .page {
+  width: calc(100vw - 2 * 1.125rem);
+  margin: 0 auto;
 }
 
 header {
   min-height: calc(76vh - 5.625rem); 
 }
 
-.footer {
+footer {
   min-height: calc(68vh - 6.75rem);
 }
+
+.slide, .slide2, .sb, .banner {
+  min-height: calc(84vh - 3.75rem);
+}
+
+.slide2 {
+  flex-wrap: wrap-reverse;
+}
+
+.title {
+  margin: auto;
+}
+
+header, footer, .copyright, .banner {
+  text-align: center;
+}
+
+
+.main {
+  border-radius: 2rem 2rem 0 0;
+}
+
 
 h1, h2, h3, h4, p, li, .button {
   font-family: 'Poppins', sans-serif;
   line-height: 1.5em;
   margin: 4vh 8vw;
   letter-spacing: 0.025em;
-}
-
-.title {
-  margin: auto;
 }
 
 h1 {
@@ -80,13 +106,11 @@ h4 {
   font-weight: 400;
 }
 
-a:link, a:visited, a:active {
+a, a:link, a:visited, a:active {
   color: #777777;
   text-decoration: underline;
   font-weight: 400;
 }
-
-
 
 .dark a:link, .dark a:visited, .dark a:active {
   font-weight: 300;
@@ -105,41 +129,6 @@ a:hover {
 
 strong {
   font-weight: 400;
-}
-
-.slide, .slide2, .sb, .page {
-  width: 95vw;
-  margin: 0 auto;
-}
-
-.slide, .slide2, .sb, .banner {
-  display: flex;
-  flex-wrap: wrap;
-  min-height: calc(84vh - 3.75rem);
-  background-color: #eeeeee;
-}
-
-.slide2 {
-  flex-wrap: wrap-reverse;
-}
-
-.sb, .banner {
-  background-color: #999999;
-  color: #eeeeee;
-}
-
-.page {
-  background: #eeeeee;
-  
-}
-
-.banner {
-  display: flex;
-  text-align: center;
-}
-
-.main {
-  border-radius: 2rem 2rem 0 0;
 }
 
 .button {
