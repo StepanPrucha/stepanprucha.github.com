@@ -3,12 +3,11 @@ html, body {
   padding: 0;
 }
 
-html {
-  font-size: 1em;
+html, body {
   background-color: #000000;
 }
 
-body, .sticky {
+.sticky, .sp, .w, .pg {
   background-color: #999999;
 }
 
