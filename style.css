@@ -46,7 +46,7 @@ a:hover {
 }
 
 .sp {
- min-height: calc(11.1111vh + 1.5em);
+ min-height: calc(11.1111vh + 1.875em);
 }
 
 h1, h2, h3, h4, p, li, .button {
@@ -55,10 +55,6 @@ h1, h2, h3, h4, p, li, .button {
   line-height: 1.5em;
   font-weight: 400;
   letter-spacing: 0.025em;
-}
-
-h3, p, li {
-  line-height: 2em;
 }
 
 h1 {
