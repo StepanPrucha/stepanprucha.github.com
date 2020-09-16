@@ -2,10 +2,8 @@ html, body {
   background-color: #000000;
   margin: 0;
   padding: 0;
-}
-
-html {
   font-size: 1em;
+  -webkit-text-size-adjust: none;
 }
 
 .sticky, .sp, .w, .pg {
