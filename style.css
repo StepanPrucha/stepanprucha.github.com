@@ -1,70 +1,67 @@
-html {
+html, body {
   margin: 0;
   padding: 0;
+}
+
+html {
   font-size: 1em;
-  background-color: #cccccc;
+  background-color: #000000;
+}
+
+body, .sticky {
+  background-color: #999999;
+}
+
+html, .dark, .dark a, a:visited {
   color: #333333;
 }
 
-body {
-  margin: 0;
-  padding: 0 1.125em;
+.light, .light a {
+  color: #E0E0E0;
 }
 
-.space {
-  height: calc(8vh + 1.875em);
+a:hover {
+  color: #666666;
 }
 
-header, footer, .banner, .slide, .slide2, .sb {
+.w, .sp, .sticky {
   display: flex;
+}
+
+.w {
+  min-height: 66.6667vh;
   flex-wrap: wrap;
+  padding: 5.5555vh 0;
 }
 
-.sb, .banner {
-  background-color: #999999;
-  color: #eeeeee;
+.b {
+  min-height: 88.8889vh;
 }
 
-.slide, .slide2, .page {
-  background: #eeeeee;
+.t, .p, .tw {
+  margin: auto 0;
+  width: calc(100vw - 12.5vw);
+  padding: 5.555vh 6.25vw; 
 }
 
-header, .banner {
-  min-height: calc(68vh - 7.5em); 
+.p {
+  padding: 0 6.25vw;
 }
 
-footer {
-  min-height: calc(68vh - 6.75em);
+.sp {
+ min-height: calc(11.1111vh + 1.5em);
 }
-
-.slide, .slide2, .sb {
-  min-height: calc(92vh - 1.875em);
-}
-
-.slide2 {
-  flex-wrap: wrap-reverse;
-}
-
-.title {
-  margin: auto;
-}
-
-header, footer, .copyright, .banner {
-  text-align: center;
-}
-
-
-.main {
-  border-radius: 2em 2em 0 0;
-}
-
 
 h1, h2, h3, h4, p, li, .button {
-  margin: 4vh 8vw;
+  margin: 2.777vh 0;
   font-family: 'Open Sans', sans-serif;
   line-height: 1.5em;
   font-weight: 400;
   letter-spacing: 0.025em;
+}
+
+h3, p, li {
+  line-height: 2em;
 }
 
 h1 {
@@ -80,147 +77,64 @@ h2 {
 h3 {
   font-size: 1.25em;
   font-weight: 300;
-  margin: 4vh 8vw 6vh 8vw;
-}
-
-.dark {
-  margin: 4vh 8vw;
-}
-
-.dark2 {
-  margin: 6vh 8vw 4vh 8vw;
-}
-
-.nm {
-  margin: 2vh 8vw;
 }
 
 h4 {
   font-size: 0.75em;
 }
 
-a, a:link, a:visited, a:active {
-  color: #777777;
-}
-
-a, a:link {
-  text-decoration: underline;
-  font-weight: 600;
-}
-
-.dark a:link, .light a:link {
-  font-weight: 400;
-  text-decoration: none;
-}
-
-.light a:link, .light a:visited, .light a:active {
-  color: #eeeeee;
-}
-
-a:hover, .light a:hover {
-  color: #33aaff;
-}
-
 strong {
   font-weight: 600;
 }
 
-.button {
-  display: inline-block;
-  margin: 2vh 8vw;
-  text-decoration: none !important;
-  background-color: #eeeeee;
-  color: #777777;
-  padding: 0.5rem 3rem;
-  font-weight: 300;
-  font-size: 1.125em;
-  cursor: pointer;
+a {
+  text-decoration: underline;
 }
 
-.button:hover {
-  background-color: #33aaff;
-  color: #eeeeee;
-}
-
-.page, .slide, .slide2, .sb, .button {
-  box-shadow: 0 0.5em 1em 0 rgba(0, 0, 0, 0.125);
-  border-radius: 2em;
-}
-
-.text {
-  width: 100%;
-  margin: auto 0 0 0;
-  padding: 6vh 0;
-}
-
-.img {
-  display: flex;
-  width: 100%;
-  min-height: 33vh;
+.n {
+  text-decoration: none;
 }
 
 .sticky {
-  display: flex;
+  padding: 0 6.25vw;
   position: sticky;
   -webkit-position: sticky;
   top: 0;
-  background-color: #eeeeee;
-  padding: 0;
-  border-radius: 0 0 2em 2em;
 }
 
 li {
   padding: 0 0 0 2vw;
 }
 
-@media only screen and (min-width: 800px) {
-
-  html {
-    font-size: calc(0.875em + 0.25vw);
+@media only screen and (min-width: 600px) {
+  
+  .w {
+    flex-wrap: nowrap;
   }
   
-body {
-  padding: 0 5vw;
-}
-  
-  h1 {
-  font-size: 3em;
+  .t {
+    width: calc(50vw - 12.5vw);
   }
   
-  .slide {
-  flex-wrap: nowrap;
-  }
-  
-  .text {
-    margin: auto 0 0 auto;
-    width: 49vw;
-  }
-  
-  .text2 {
-    margin: auto 0 0 0;
-  }
-  
-  .img {
-    width: 31vw;
+  .t2 {
+    margin: auto 0 auto auto;
   }
   
 }
 
-@media only screen and (max-width: 360px) {
+@media only screen and (min-width: 1000px) { 
+  
+  html{
+    font-size: 1.6vw;
+  }
+  
+}
+
+@media only screen and (max-width: 400px) {
   
   html {
-    font-size: 0.75em;
-  }
-  
-  .button {
-    padding: 0.5rem 1.5rem;
+    font-size: 4vw;
   }
   
 }
 
-a, a:link, a:visited, a:hover, a:active, .button, .button:hover {
-    -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
