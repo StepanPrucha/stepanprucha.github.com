@@ -9,7 +9,7 @@ html, body {
   background-color: #999999;
 }
 
-html, .dark, .dark a, a:visited {
+html, .dark, .dark a, a:visited, a:active {
   color: #333333;
 }
 
@@ -134,4 +134,3 @@ li {
   }
   
 }
-
