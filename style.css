@@ -4,6 +4,7 @@ html, body {
   padding: 0;
   -webkit-text-size-adjust: 100%;
   font-size: 21px;
+  line-height: 32px;
 }
 
 .sticky, .sp, .w, .pg {
@@ -50,10 +51,9 @@ a:hover {
  min-height: calc(11.1111vh + 1.875em);
 }
 
-h1, h2, h3, p, li, .button {
-  margin: 2.777vh 0;
+h1, h2, h3, p, li {
+  margin: 3.3333vh 0;
   font-family: 'Open Sans', sans-serif;
-  line-height: 1.5em;
   font-weight: 400;
   letter-spacing: 0.025em;
 }
