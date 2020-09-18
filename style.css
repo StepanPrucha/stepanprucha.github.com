@@ -3,7 +3,7 @@ html, body {
   margin: 0;
   padding: 0;
   -webkit-text-size-adjust: 100%;
-  font-size: 1.125rem;
+  font-size: 21px;
 }
 
 .sticky, .sp, .w, .pg {
@@ -64,7 +64,7 @@ h1 {
 }
 
 h2 {
-  font-size: 1.7777em;
+  font-size: 1.6666em;
   font-weight: 700;
 }
 
