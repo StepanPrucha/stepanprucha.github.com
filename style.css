@@ -3,6 +3,7 @@ html, body {
   margin: 0;
   padding: 0;
   -webkit-text-size-adjust: 100%;
+  font-size: 1.125rem;
 }
 
 .sticky, .sp, .w, .pg {
@@ -21,7 +22,7 @@ a:hover {
   color: #666666;
 }
 
-.w, .sp, .sticky {
+.w, .sp {
   display: flex;
 }
 
@@ -35,7 +36,7 @@ a:hover {
   min-height: 88.8889vh;
 }
 
-.t, .p, .tw {
+.t, .p {
   margin: auto 0;
   width: calc(100vw - 12.5vw);
   padding: 5.555vh 6.25vw; 
@@ -58,7 +59,7 @@ h1, h2, h3, h4, p, li, .button {
 }
 
 h1 {
-  font-size: 2.25em;
+  font-size: 2em;
   font-weight: 300;
 }
 
@@ -93,7 +94,7 @@ a {
 }
 
 .sticky {
-  padding: 0 6.25vw;
+  padding: 1px 0;
   position: sticky;
   -webkit-position: sticky;
   top: 0;
@@ -117,17 +118,22 @@ li {
     margin: auto 0 auto auto;
   }
   
-}
-
-@media only screen and (min-width: 1200px) { 
-  
-  html{
-    font-size: 1.3334vw;
+  .p {
+    max-width: 35rem;
+    margin: auto;
   }
   
 }
 
-@media only screen and (max-width: 320px) {
+@media onl screen and (min-width: 1440px) { 
+  
+  html{
+    font-size: 1.25vw;
+  }
+  
+}
+
+@media only screen and (max-width: 360px) {
   
   html {
     font-size: 5vw;
