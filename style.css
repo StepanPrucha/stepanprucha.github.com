@@ -24,7 +24,7 @@ a:hover {
   color: #666666;
 }
 
-.w, .sp {
+.w, .sp, .c {
   display: flex;
 }
 
@@ -96,6 +96,10 @@ a {
   position: sticky;
   -webkit-position: sticky;
   top: 0;
+}
+
+.c {
+  height: 100%;
 }
 
 li {
