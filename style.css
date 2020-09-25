@@ -125,18 +125,18 @@ li {
   
 }
 
-@media onl screen and (min-width: 72em) { 
+@media onl screen and (min-width: 64em) { 
   
   html{
-    font-size: 1.388889vw;
+    font-size: 1.5625vw;
   }
   
 }
 
-@media only screen and (max-width: 18em) {
+@media only screen and (max-width: 16em) {
   
   html {
-    font-size: 5vw;
+    font-size: 6.25vw;
   }
   
 }
