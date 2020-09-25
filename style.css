@@ -10,11 +10,11 @@ html, body {
   background-color: #bbbbbb;
 }
 
-html, .dark, .dark a, a:link, a:visited, a:active {
+html, .dark, a:link, a:visited, a:active, .dark a:link, .dark a:visited, .dark a:active {
   color: #333333;
 }
 
-.light, .light a {
+.light, .light a:link, .light a:visited. .light a:active {
   color: #eeeeee;
 }
 
