@@ -6,7 +6,7 @@ html, body {
   font-size: 1.125em;
 }
 
-.sp, .w, .pg {
+.sp, .w, .pg, .sticky {
   background-color: #bbbbbb;
 }
 
@@ -89,9 +89,6 @@ a {
   position: sticky;
   -webkit-position: sticky;
   top: -1px;
-  background-color: rgba(187, 187, 187, 0.75);
-  -webkit-backdrop-filter: blur(2px);
-  backdrop-filter: blur(2px);
 }
 
 li {
@@ -116,6 +113,12 @@ li {
     max-width: 32em;
     margin: auto;
   }
+  
+  .sticky {
+  background-color: rgba(187, 187, 187, 0.75);
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+}
   
 }
 
