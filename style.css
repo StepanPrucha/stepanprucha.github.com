@@ -29,7 +29,7 @@ a:hover {
 .w {
   min-height: 66.6667vh;
   flex-wrap: wrap;
-  padding: 5.5555vh 0;
+  padding: 5.5556vh 0;
 }
 
 .b {
@@ -39,7 +39,7 @@ a:hover {
 .t, .p {
   margin: auto 0;
   width: calc(100vw - 12.5vw);
-  padding: 5.555vh 6.25vw; 
+  padding: 5.5556vh 6.25vw; 
 }
 
 .p {
@@ -47,11 +47,11 @@ a:hover {
 }
 
 .sp {
- min-height: calc(11.1111vh + 1.666em * 1.25);
+ min-height: calc(11.1112vh + 1.666em * 1.25);
 }
 
 h1, h2, h3, h4, p, li {
-  margin: 3.3333vh 0;
+  margin: 5.5556vh 0;
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   line-height: 1.25em;
