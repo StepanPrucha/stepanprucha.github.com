@@ -47,7 +47,7 @@ a:hover {
 }
 
 .sp {
- min-height: calc(11.1112vh + 1.666em * 1.25);
+ min-height: calc(11.1112vh + 1.333em * 1.25);
 }
 
 h1, h2, h3, h4, p, li {
