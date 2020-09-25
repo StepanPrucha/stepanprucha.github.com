@@ -96,7 +96,7 @@ li {
   padding: 0 0 0 3.125vw;
 }
 
-@media only screen and (min-width: calc(32em + 12.5vw)) {
+@media only screen and (min-width: calc(32rem + 12.5vw)) {
   
   .w {
     flex-wrap: nowrap;
@@ -111,13 +111,13 @@ li {
   }
   
   .p {
-    max-width: 32em;
+    max-width: 32rem;
     margin: auto;
   }
   
 }
 
-@media onl screen and (min-width: 64em) { 
+@media onl screen and (min-width: 64rem) { 
   
   html{
     font-size: 1.5625vw;
@@ -125,7 +125,7 @@ li {
   
 }
 
-@media only screen and (max-width: 16em) {
+@media only screen and (max-width: 16rem) {
   
   html {
     font-size: 6.25vw;
