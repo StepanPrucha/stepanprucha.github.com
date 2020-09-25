@@ -88,7 +88,7 @@ a {
 .sticky {
   position: sticky;
   -webkit-position: sticky;
-  top: -1px;
+  top: 0;
 }
 
 li {
@@ -113,12 +113,6 @@ li {
     max-width: 32em;
     margin: auto;
   }
-  
-  .sticky {
-  background-color: rgba(187, 187, 187, 0.75);
-  -webkit-backdrop-filter: blur(2px);
-  backdrop-filter: blur(2px);
-}
   
 }
 
