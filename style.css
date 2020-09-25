@@ -122,10 +122,6 @@ li {
     font-size: 1.5625vw;
   }
   
-  .p {
-    overflow: hidden;
-  }
-  
 }
 
 @media only screen and (max-width: 320px) {
