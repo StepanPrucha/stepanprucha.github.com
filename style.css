@@ -3,7 +3,7 @@ html, body {
   margin: 0;
   padding: 0;
   -webkit-text-size-adjust: 100%;
-  font-size: 1.25em;
+  font-size: 1.125em;
 }
 
 .sticky, .sp, .w, .pg {
@@ -22,7 +22,7 @@ a:hover {
   color: #999999;
 }
 
-.w, .sp, .c {
+.w, .sp {
   display: flex;
 }
 
@@ -73,10 +73,6 @@ h4 {
   font-weight: 300;
 }
 
-p {
-  font-size: 1em;
-}
-
 strong {
   font-weight: 600;
 }
@@ -94,10 +90,6 @@ a {
   position: sticky;
   -webkit-position: sticky;
   top: 0;
-}
-
-.c {
-  height: 100%;
 }
 
 li {
