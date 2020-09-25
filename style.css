@@ -89,9 +89,9 @@ a {
   position: sticky;
   -webkit-position: sticky;
   top: 0;
-  background-color: rgba(187, 187, 187, 0.8);
-  -webkit-backdrop-filter: blur(2.5px);
-  backdrop-filter: blur(2.5px);
+  background-color: rgba(187, 187, 187, 0.75);
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
 }
 
 li {
