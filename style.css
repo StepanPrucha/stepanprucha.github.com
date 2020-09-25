@@ -15,11 +15,11 @@ html, .dark, .dark a, a:link, a:visited, a:active {
 }
 
 .light, .light a {
-  color: #E6E6E6;
+  color: #eeeeee;
 }
 
 a:hover {
-  color: #666666;
+  color: #999999;
 }
 
 .w, .sp, .c {
