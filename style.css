@@ -3,7 +3,7 @@ html, body {
   margin: 0;
   padding: 0;
   -webkit-text-size-adjust: 100%;
-  font-size: 20px;
+  font-size: 1.25em;
 }
 
 .sticky, .sp, .w, .pg {
@@ -47,7 +47,7 @@ a:hover {
 }
 
 .sp {
- min-height: calc(11.1111vh + 1.666rem * 1.25);
+ min-height: calc(11.1111vh + 1.666em * 1.25);
 }
 
 h1, h2, h3, h4, p, li {
@@ -59,12 +59,12 @@ h1, h2, h3, h4, p, li {
 }
 
 h1, h2 {
-  font-size: 2.2222rem;
+  font-size: 2.2222em;
   font-weight: 300;
 }
 
 h3 {
-  font-size: 1.6666rem;
+  font-size: 1.6666em;
   font-weight: 700;
 }
 
@@ -74,7 +74,7 @@ h4 {
 }
 
 p {
-  font-size: 1rem;
+  font-size: 1em;
 }
 
 strong {
@@ -119,13 +119,13 @@ li {
   }
   
   .p {
-    max-width: 36rem;
+    max-width: 36em;
     margin: auto;
   }
   
 }
 
-@media onl screen and (min-width: 72rem) { 
+@media onl screen and (min-width: 72em) { 
   
   html{
     font-size: 1.388889vw;
@@ -133,7 +133,7 @@ li {
   
 }
 
-@media only screen and (max-width: 18rem) {
+@media only screen and (max-width: 18em) {
   
   html {
     font-size: 5vw;
