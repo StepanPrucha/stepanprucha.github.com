@@ -22,7 +22,7 @@ a:hover {
   color: #999999;
 }
 
-.w, .sp {
+.w, .sp, .sticky {
   display: flex;
 }
 
