@@ -3,7 +3,7 @@ html, body {
   margin: 0;
   padding: 0;
   -webkit-text-size-adjust: 100%;
-  font-size: 1.25em;
+  font-size: 1.125em;
 }
 
 .sp, .w, .pg, .sticky {
@@ -117,7 +117,7 @@ li {
   
 }
 
-@media only screen and (min-width: 1280px) { 
+@media only screen and (min-width: 1152px) { 
   
   html{
     font-size: 1.5625vw;
@@ -125,10 +125,10 @@ li {
   
 }
 
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 360px) {
   
   html {
-    font-size: 6.25vw;
+    font-size: 5vw;
   }
   
 }
