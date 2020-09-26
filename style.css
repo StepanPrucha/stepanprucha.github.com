@@ -93,7 +93,7 @@ a {
 }
 
 li {
-  padding: 0 0 0 3.125vw;
+  padding: 0 0 0 1em;
 }
 
 @media only screen and (min-width: 640px) {
