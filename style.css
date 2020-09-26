@@ -18,8 +18,8 @@ html, .dark, a:link, a:visited, a:active, .dark a:link, .dark a:visited, .dark a
   color: #eeeeee;
 }
 
-a:hover {
-  color: #999999;
+a:hover, .dark a:hover, .light a:hover {
+  color: #aaaaaa;
 }
 
 .w, .sp {
