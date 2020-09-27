@@ -2,8 +2,7 @@ html, body {
   background-color: #000000;
   margin: 0;
   padding: 0;
-  -webkit-text-size-adjust: 100%;
-  font-size: 1.125em;
+  font-size: 20px;
 }
 
 .sp, .w, .pg, .sticky {
@@ -96,7 +95,7 @@ li {
   padding: 0 0 0 1em;
 }
 
-@media only screen and (min-width: 28em) {
+@media only screen and (min-width: calc(28rem + 12.5vw)) {
   
   .w {
     flex-wrap: nowrap;
@@ -117,7 +116,7 @@ li {
   
 }
 
-@media only screen and (min-width: 75em) { 
+@media only screen and (min-width: 75rem) { 
   
   html {
     font-size: 1.33335vw;
@@ -125,7 +124,7 @@ li {
   
 }
 
-@media only screen and (max-width: 20em) {
+@media only screen and (max-width: 20rem) {
   
   html {
     font-size: 5vw;
