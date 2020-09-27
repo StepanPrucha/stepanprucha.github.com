@@ -9,24 +9,16 @@ html, body {
   background-color: #bbbbbb;
 }
 
-html, .dark, a:link, .dark a:link {
+html, .dark, a:link, a:visited, a:active {
   color: #333333;
 }
 
-.light, .light a:link {
+.light, .light a:link, .light a:visited, .light a:active {
   color: #eeeeee;
 }
 
-a:hover, .dark a:hover, .light a:hover {
+a:hover, .light a:hover {
   color: #888888;
-}
-
-a:visited, a:active, .dark a:visited, .dark a:active {
-  color: #333333;
-}
-
-.light a:visited, .light a:active {
-  color: #eeeeee;
 }
 
 .w, .sp {
