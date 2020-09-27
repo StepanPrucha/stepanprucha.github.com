@@ -9,11 +9,11 @@ html, body {
   background-color: #bbbbbb;
 }
 
-html, .dark, a:link, a:visited, a:active, .dark a:link, .dark a:visited {
+html, .dark, a:link, .dark a:link {
   color: #333333;
 }
 
-.light, .light a:link, .light a:visited {
+.light, .light a:link {
   color: #eeeeee;
 }
 
@@ -21,11 +21,11 @@ a:hover, .dark a:hover, .light a:hover {
   color: #888888;
 }
 
-.dark a:active {
+a:visited, a:active, .dark a:visited, .dark a:active {
   color: #333333;
 }
 
-.light a:active {
+.light a:visited, .light a:active {
   color: #eeeeee;
 }
 
