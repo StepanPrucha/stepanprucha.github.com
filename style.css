@@ -117,4 +117,18 @@ li {
   
 }
 
+@media only screen and (min-width: 75em) { 
+  
+  html {
+    font-size: 1.33335vw;
+  }
+  
+}
 
+@media only screen and (max-width: 20em) {
+  
+  html {
+    font-size: 5vw;
+  }
+  
+}
