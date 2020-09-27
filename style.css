@@ -9,15 +9,23 @@ html, body {
   background-color: #bbbbbb;
 }
 
+html, .dark, a:link, a:visited, a:active, .dark a:link, .dark a:visited {
+  color: #333333;
+}
+
+.light, .light a:link, .light a:visited {
+  color: #eeeeee;
+}
+
 a:hover, .dark a:hover, .light a:hover {
   color: #888888;
 }
 
-html, .dark, a:link, a:visited, a:active, .dark a:link, .dark a:visited, .dark a:active {
+.dark a:active {
   color: #333333;
 }
 
-.light, .light a:link, .light a:visited, .light a:active {
+.light a:active {
   color: #eeeeee;
 }
 
