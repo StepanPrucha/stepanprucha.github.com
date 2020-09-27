@@ -96,7 +96,7 @@ li {
   padding: 0 0 0 1em;
 }
 
-@media only screen and (min-width: 640px) {
+@media only screen and (min-width: 28em) {
   
   .w {
     flex-wrap: nowrap;
@@ -117,15 +117,15 @@ li {
   
 }
 
-@media only screen and (min-width: 1152px) { 
+@media only screen and (min-width: 75em) { 
   
   html{
-    font-size: 1.5625vw;
+    font-size: 1.33335vw;
   }
   
 }
 
-@media only screen and (max-width: 360px) {
+@media only screen and (max-width: 20em) {
   
   html {
     font-size: 5vw;
