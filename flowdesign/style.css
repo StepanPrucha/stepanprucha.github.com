@@ -93,8 +93,6 @@ a:active {
   height: 56vw;
   max-width: 107vh;
   max-height: 60vh;
-  border-radius: 1em;
-  background-color: silver;
 }
 
 /*
@@ -107,6 +105,7 @@ a:active {
 }
 */
 .slide {
+  background: #eee; 
   margin-bottom: 10vh;
   flex-flow: column;
 }
