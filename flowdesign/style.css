@@ -23,17 +23,21 @@ body {
 }
 
 header,
-.slide {
+.slide, footer {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin: 10vh 0;
+  padding-top: 10vh;
 }
 
 header {
   text-align: center;
   min-height: 60vh;
+}
+
+footer {
+  padding-bottom: 10vh;
 }
 
 .logo {
@@ -84,38 +88,13 @@ a:active {
   padding: 1em 2em 2em 2em;
 }
 
-.image,
 .img {
-  height: calc(80vh - 8em);
-}
-@media (min-width: 52.5em) {
-  .image,
-  .img {
-    height: 80vh;
-  }
-}
-
-.image {
   width: 100vw;
-}
-
-.dragscroll {
-  overflow-x: hidden;
-  overflow-y: hidden;
-  cursor: grab;
-  cursor: -o-grab;
-  cursor: -moz-grab;
-  cursor: -webkit-grab;
-}
-
-.img {
-  min-width: 100vw;
-  width: calc((80vh - 8em) * 1.78);
-}
-@media (min-width: 52.5em) {
-  .img {
-    width: calc(80vh * 1.78);
-  }
+  height: 56vw;
+  max-width: 107vh;
+  max-height: 60vh;
+  border-radius: 1em;
+  background-color: silver;
 }
 
 /*
@@ -128,7 +107,7 @@ a:active {
 }
 */
 .slide {
-  background: #eee;
+  margin-bottom: 10vh;
   flex-flow: column;
 }
 @media (min-width: 52.5em) {
@@ -155,7 +134,6 @@ a:active {
   padding: 1em;
   justify-content: center;
   align-items: center;
-  background: #999999;
   background: linear-gradient(0deg, #999999, rgba(153, 153, 153, 0.5));
   -webkit-backdrop-filter: saturate(50%) blur(10px);
   backdrop-filter: saturate(50%) blur(10px);
@@ -168,7 +146,6 @@ a:active {
   background: #eee;
   border-radius: 1em;
   max-width: 20em;
-  margin: 10vh auto;
 }
 
 input,

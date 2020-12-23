@@ -2,8 +2,7 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Flow Design Gallery</title>
+  <title>CodePen - Gallery</title>
   <link rel="stylesheet" href="./style.css">
 
 </head>
@@ -13,7 +12,11 @@
 
 <head>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
-  <title>Gallery</title>
+  <title>Flow Design Gallery</title>
+  <meta name="description" content="Gallery of digital art, download free wallpapers">
+  <meta name="keywords" content="Flow, Design, Gallery">
+  <meta name="author" content="Stepan Prucha">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script type="text/javascript" src="https://cdn.rawgit.com/asvd/dragscroll/master/dragscroll.js"></script>
   <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
@@ -22,69 +25,46 @@
 
   <div class="wrapper">
 
-    <header>
+    <header id="top">
       <div class="text">
         <img class="logo" src="https://i.ibb.co/pbY6tht/flow-design-logo.png">
         <h1>Flow Design</h1>
         <hr>
-        <p>Welcome, download, enjoy. <a href="#">#digitalart</a> <a href="#">#gallery</a></p>
+        <p>Welcome, download graphics in 6K and enjoy. <a href="#foot">#digitalart</a> <a href="#foot">#gallery</a></p>
         <a class="godown" href="#first">↓</a>
       </div>
     </header>
-
-    <div class="slide" id="first">
-      <div class="image dragscroll">
-        <div class="img" style="background: center / cover no-repeat url('https://i.ibb.co/Rc03M6w/flowdeign-blueme-preview.jpg')"></div>
-      </div>
-      <div class="text">
-        <h3>Blue me.</h3>
-        <hr>
-        <h5>6K (6144 * 3456 px)</h5>
-        <a href="mismo.png" class="download" onClick="thanks()" download>Get →</a>
-      </div>
-    </div>
+    
+    <div id="first"></div>
 
     <div class="slide">
-      <div class="image" style="background: center / cover no-repeat url('https://i.ibb.co/Rc03M6w/flowdeign-blueme-preview.jpg')"></div>
+        <div class="img">
+          <!-- style="background: center / cover no-repeat url('flowdesign/previews/ausi.jpg')" -->
+        </div>
       <div class="text">
-        <h3>Blue me.</h3>
+        <h3>Ausi</h3>
         <hr>
-        <a href="#">Get →</a>
+        <a href="pix/ausi.png" onClick="thanks()" download>Get →</a>
       </div>
     </div>
-
-    <div class="slide">
-      <div class="image" style="background: center / cover no-repeat url('https://i.ibb.co/Rc03M6w/flowdeign-blueme-preview.jpg')"></div>
+    
+    
+    
+    <footer id="foot">
       <div class="text">
-        <h3>Blue me.</h3>
-        <hr>
-        <a href="#">Get →</a>
+        <center><a class="godown" href="#top">↑</a></center>
+        <h3>#digitalart</h3>
+        <p>It’s a form of art created via digital software. I mostly work with adobe illustrator and photoshop. These pieces are created mostly with illustrator’s vectors, meshes and gradients. Photoshop part is mostly playing with filters of vector graphics. All these graphics can be scalable. Please <a href="mailto:stepanprcuhadesign@gmail.com">contact us</a> if you think about bigger size then 6K. 🙏</p>
+        <h3>#gallery</h3>
+        <p>You can download these artworks in high resolution. Please consider being a part of my audience, it will have a better impact when i decide there is something meaningful worthwhile to share design related.</p>
+        <center><a href="javascript:void(0)" onClick="thanks()">Subscribe 👍</a> ©2020 Flowdesign</center>
       </div>
-    </div>
-
-    <div class="slide">
-      <div class="image" style="background: center / cover no-repeat url('https://i.ibb.co/Rc03M6w/flowdeign-blueme-preview.jpg')"></div>
-      <div class="text">
-        <h3>Blue me.</h3>
-        <hr>
-        <a href="#">Get →</a>
-      </div>
-    </div>
+    </footer>
 
   </div>
   <!-- wrapper end -->
   <div class="dark" id="thanks">
     <div class="text newsletter">
-      <!--
-      <h3>Thanks for download.</h3>
-      <hr>
-      <p>Please, consider to be a part of my audience.</p>
-      <label>Email</label>
-      <input placeholder="Email"></input>
-      <button>Send</button>
-    <button class="btn2" onClick="thanks()">Lave me alone</button>
-    </div> -->
-      <!-- Begin Mailchimp Signup Form -->
 <div id="mc_embed_signup">
 <form action="https://icloud.us17.list-manage.com/subscribe/post?u=a0d6a83e0a815723001c50f1e&amp;id=3ed4977fa5" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
     <div id="mc_embed_signup_scroll">
