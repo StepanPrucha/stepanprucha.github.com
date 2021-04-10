@@ -6,10 +6,10 @@ var toogler = document.getElementById("toogler");
 
 window.onscroll = function () {
   var currentScroll = window.scrollY;
+  document.getElementById("tell-current").innerHTML = currentScroll;
   if (currentScroll > 100) {
-    document.getElementById("tell-current").innerHTML = currentScroll;
     if (previousScroll - currentScroll < 0) {
-      navBar.style.top = "-2.5em";
+      navBar.style.top = "-3em";
     } else {
       navBar.style.top = "0";
     }
@@ -211,3 +211,4 @@ function copyID() {
   clearTimeout(timerTwo);
   timerTwo = setTimeout(hideAlert, 5000);
 }
+
