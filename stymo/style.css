@@ -1,0 +1,792 @@
+@charset "UTF-8";
+/* Separate HTML pages */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&display=swap");
+#html-login,
+#html-checkout,
+#html-success,
+#html-account,
+#html-orders,
+#html-recommend,
+#html-faq,
+#html-terms,
+#html-contact {
+  display: none;
+}
+
+/* Media Queries */
+/* Font */
+/* Colors */
+/* Default */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  line-height: 1.25;
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.025em;
+  color: #333;
+}
+
+/*
+::-webkit-scrollbar {
+  width: 0.5em;
+  height: 0.5em;
+}
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-corner {
+  background: $silk;
+}
+::-webkit-scrollbar-thumb {
+  background: $platinum;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: $silver;
+} */
+/* Links */
+.link {
+  text-decoration: underline;
+  color: #777;
+}
+
+.link:hover {
+  color: #dabfa4;
+}
+
+.link-delete {
+  text-decoration: none;
+}
+
+.link-recommend {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5em;
+}
+
+.checkbox-row:last-child {
+  margin-bottom: 0 !important;
+}
+
+.checkbox,
+.checkmark {
+  width: 1.5em;
+  height: 1.5em;
+  margin-right: 1em;
+}
+
+.checkbox {
+  background: white;
+  border: 1px solid currentColor;
+  box-sizing: content-box;
+}
+
+.checkbox-row:hover {
+  color: #dabfa4;
+}
+.checkbox-row:hover .checkbox {
+  border: 1px solid #dabfa4;
+}
+
+.checkmark {
+  stroke: #d3b392;
+  display: none;
+}
+
+.checked .checkmark {
+  display: block;
+}
+
+a:hover,
+.logo:hover,
+li:hover {
+  color: #dabfa4;
+}
+
+.product-short-info {
+  margin-top: 0.5em;
+}
+
+.frame,
+form {
+  flex: 1;
+  margin: 0 1em;
+  padding: 1.5em 0;
+  display: flex;
+  flex-flow: column;
+}
+@media (min-width: 40em) {
+  .frame,
+form {
+    margin: 0 auto;
+    width: 80vw;
+  }
+}
+
+/* Form */
+.form {
+  justify-content: center;
+}
+.form .box-2 {
+  flex: 1;
+}
+.form .user {
+  margin-bottom: 1.5em;
+  align-items: flex-start;
+}
+.form .headline {
+  margin-bottom: 1.7142857143em;
+}
+.form .numbers {
+  margin: 1.5em 0;
+}
+@media (min-width: 40em) {
+  .form .user {
+    margin-top: 2em;
+    align-items: center;
+  }
+  .form .profile-pic {
+    min-width: 6em;
+    min-height: 6em;
+  }
+  .form .headline {
+    margin-bottom: 10vh;
+  }
+  .form .numbers {
+    margin: 1.5em 0 3em;
+  }
+}
+@media (min-width: 60em) {
+  .form {
+    margin: 0 auto;
+    width: 40vw;
+    max-width: 30em;
+  }
+  .form .profile-pic {
+    max-width: 8em;
+    max-height: 8em;
+  }
+}
+
+/* .box flex row*/
+.box-referral-link .box-2 {
+  flex: 1;
+}
+
+/* Recommend = Links + Stats */
+.container-referral-stats {
+  background: linear-gradient(180deg, black, rgba(0, 0, 0, 0)), url("https://i.ibb.co/BNMMpGn/Soul-Cacao-Ceremony.jpg") top 45% center/cover no-repeat;
+  padding: 1.5em 0 1.5em 1em;
+  filter: grayscale(40%);
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: flex-start;
+  min-height: 60vh;
+}
+.container-referral-stats .block * {
+  color: white;
+}
+.container-referral-stats .block {
+  margin: 1.5em 1em 1.5em 0;
+  flex: 1;
+  min-width: 8em;
+}
+.container-referral-stats .block:first-child * {
+  color: #dabfa4;
+}
+@media (min-width: 40em) {
+  .container-referral-stats {
+    padding: 5vh 10vw;
+  }
+  .container-referral-stats .block {
+    margin: 5vh 1em 5vh 0;
+    flex: none;
+  }
+  .container-referral-stats .block:last-cild {
+    margin: 5vh 0;
+  }
+}
+
+.flex {
+  display: flex;
+}
+
+.block {
+  display: block;
+}
+
+/* Login Screen */
+.form-login .link {
+  margin-top: 1.7142857143em;
+}
+
+.row {
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+/***********************/
+/***********************/
+/********RESTART********/
+/***********************/
+/***********************/
+body {
+  background: black;
+  font-size: 1em;
+}
+
+.nav-bar, .wrapper {
+  min-width: 15em;
+}
+
+/**** WRAPPER ****/
+.wrapper {
+  display: flex;
+  flex-flow: column;
+  min-height: 100vh;
+  background: #eee;
+  width: 100%;
+}
+
+/* menu */
+.menu::-webkit-scrollbar {
+  display: none;
+}
+
+.menu {
+  position: fixed;
+  z-index: 9;
+  top: -100vh;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+  transition: 0.5s opacity, 0.5s top 0.5s;
+  opacity: 0;
+  background: #eee;
+}
+
+/**** SPACE ****/
+.space {
+  height: 10vh;
+  min-height: 5em;
+  text-align: right;
+  padding: 1.3333333333em;
+}
+@media (min-width: 40em) {
+  .space {
+    padding: 1.3333333333em 10vw;
+  }
+}
+
+/**** BOX ****/
+.box {
+  display: flex;
+  align-items: center;
+}
+
+.spacy {
+  justify-content: space-between;
+}
+
+.row-wrap {
+  flex-flow: row wrap;
+}
+
+.box-user {
+  align-items: flex-start;
+}
+
+/* main navigation bar */
+.nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: top 0.25s;
+  z-index: 10;
+}
+
+.nav-bar > .box {
+  height: 2.5em;
+  padding: 0 1em;
+}
+@media (min-width: 40em) {
+  .nav-bar > .box {
+    padding: 0 10vw;
+  }
+}
+
+.logo {
+  line-height: 2.5em;
+}
+
+.box-logo-menu {
+  background: rgba(204, 204, 204, 0.6);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+}
+
+.box-alert {
+  background: MediumAquaMarine;
+  color: white;
+  display: none;
+}
+
+.box-product-info {
+  align-items: flex-start;
+}
+
+/**** CONTAINER ****/
+.container {
+  flex: 1;
+  display: flex;
+  margin: 0 1em;
+  min-height: 60vh;
+  flex-flow: column;
+}
+
+.wrapper-home > .container {
+  background-color: white;
+}
+
+.banner-1 {
+  background: url("https://i.ibb.co/KGrsGVd/cocoa-1.jpg") center/cover no-repeat;
+}
+
+.banner-1 > .base {
+  padding: 0 1em;
+  color: white;
+  align-items: center;
+  text-align: center;
+}
+
+/**** BASE ****/
+.base {
+  flex: 1;
+  margin: 2em 0;
+  width: 100%;
+  max-width: 40em;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+
+.base > * {
+  margin-bottom: 1.5em;
+}
+
+.base > :last-child {
+  margin-bottom: 0;
+}
+
+.base-main-menu {
+  margin: 1.25em 0;
+}
+
+.base-main-menu > * {
+  margin-bottom: 0;
+}
+
+/**** TYPOGRAPHY ****/
+/* Font size*/
+.headline {
+  font-size: 1.75em;
+}
+
+.product-name,
+.profile-name,
+.number {
+  font-size: 1.5em;
+}
+
+.currency-sign,
+.price,
+.subheadline {
+  font-size: 1.25em;
+}
+
+.paragraph,
+.product-short-info,
+.select {
+  font-size: 1em;
+}
+
+.label,
+.toogler,
+.currency-ticker,
+.earn-bonus,
+.space,
+.distance-from-top {
+  font-size: 0.75em;
+}
+
+.link,
+.button,
+.input,
+.footer > .select-language,
+.copyright,
+.stat {
+  font-size: 0.875em;
+}
+
+/* font weight*/
+.headline {
+  font-weight: 200;
+}
+
+.select,
+li,
+.stat {
+  font-weight: 300;
+}
+
+.logo,
+.product-name,
+.profile-name {
+  font-weight: 400;
+}
+
+.price,
+.select-quantity,
+.number {
+  font-weight: 500;
+}
+
+/* letter spacing */
+.logo {
+  letter-spacing: 0.5em;
+}
+
+.button,
+.toogler {
+  letter-spacing: 0.125em;
+}
+
+.headline,
+.space,
+.distance-from-top {
+  letter-spacing: 0.05em;
+}
+
+/* colors */
+.space,
+.distance-from-top,
+.paragraph,
+.product-short-info,
+.select-quantity {
+  color: #777;
+}
+
+/* solo */
+.headline {
+  color: currentColor;
+}
+
+/* text transform uppercase */
+.logo,
+.button-2 {
+  text-transform: uppercase;
+}
+
+.stat {
+  margin-top: 0.2857142857em;
+  color: #777;
+}
+
+.label {
+  color: #777;
+  margin-bottom: 0.6666666667em !important;
+}
+
+/* select + input + button + toogler */
+.select,
+.input .button {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.footer > .select-language,
+.input,
+.button {
+  line-height: 2.2857142857em;
+  height: 2.2857142857em;
+  color: currentColor;
+}
+
+/* toogler */
+.toogler {
+  line-height: 2em;
+  height: 2em;
+  margin: auto 0;
+  padding: 0 2em;
+  background: white;
+}
+
+.toogler-buy {
+  background: #d3b392;
+  color: white;
+}
+
+/* button */
+.button {
+  padding: 0 3em;
+  text-align: center;
+}
+
+.button-1 {
+  background: #d3b392;
+  color: white;
+}
+
+.button-2 {
+  border: 1px solid currentColor;
+}
+
+.button-3 {
+  background: #333;
+  color: white;
+}
+
+/* select */
+.select {
+  border: 0;
+  border-radius: 0;
+  padding: 0 2.25em 0 0.625em;
+  min-width: 3.75em;
+  line-height: 2em;
+  outline: none;
+}
+
+.select-quantity {
+  background: url("https://i.ibb.co/wR1pZx7/down-arrow-biege.png") right 0.25em top 50%/1.75em no-repeat;
+}
+
+.select-language {
+  background: url("https://i.ibb.co/gVwYX7H/down-arrow-silver.png") right 0.25em top 50%/1.75em no-repeat;
+  margin: 0.375em auto 0.375em -0.625em;
+}
+
+.footer > .select-language {
+  margin: 1em 1.3333333333em;
+  /* 12px 16px */
+  color: #777;
+}
+
+/* inputs */
+.input {
+  padding: 0 0.8571428571em;
+  /* 0 12px */
+  border: 1px solid #333;
+  outline: none;
+  background: white;
+  width: 100%;
+  overflow: hidden;
+}
+
+.input-locked {
+  border: 1px solid #ddd;
+  background: #ddd;
+}
+
+.input-icon {
+  fill: #333;
+  width: 2em;
+  height: 2em;
+  margin-left: -2em;
+  background: current-background-color;
+}
+
+/* lists - main menu links */
+ul {
+  list-style: none;
+}
+
+li {
+  padding: 0.75em 0;
+}
+
+.earn-bonus {
+  background: white;
+  margin: -0.25em 0 -0.25em 1.5em;
+  padding: 0.3333333333em 1em 0.4166666667em;
+  text-align: center;
+  color: currentColor;
+  border: 1px solid #d3b392;
+}
+
+/* Small Elements */
+/* Line */
+.line {
+  height: 1px;
+  background: currentColor;
+  width: 100%;
+  margin: 1em 0;
+}
+
+.line-short {
+  display: none;
+}
+
+.block {
+  display: block;
+}
+
+.block > * {
+  margin-bottom: 0.5em;
+}
+
+.block > :last-child {
+  marign-bottom: 0;
+}
+
+/* gap */
+.gap {
+  width: 1em;
+}
+
+/* distance from top = bottom-left fancy indicator */
+.distance-from-top {
+  padding: 1.3333333333em;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  display: none;
+}
+
+/**** Images ****/
+.menu-product-image {
+  margin-left: 1em;
+  min-width: 4em;
+  min-height: 4em;
+  width: 10vw;
+  height: 10vw;
+  max-width: 8em;
+  max-height: 8em;
+  background: url("https://i.ibb.co/HqFRvhN/cacao-crystal.jpg") center/cover no-repeat;
+}
+
+.profile-pic {
+  min-width: 4em;
+  min-height: 4em;
+  width: 20vw;
+  height: 20vw;
+  max-width: 8em;
+  max-height: 8em;
+  margin-left: 1em;
+}
+
+/**** FOOTER ****/
+.footer {
+  padding: 1.5em 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+.copyright {
+  margin: 1em 1.3333333333em;
+  /* 12px 16px */
+  color: #777;
+  text-align: center;
+}
+
+/**********************/
+/**********************/
+/**** MEDIA QUERRY ****/
+/**********************/
+/**********************/
+@media (min-width: 40em) {
+  .base {
+    margin: 2.5em auto;
+  }
+
+  .line {
+    margin: 1.5em 0;
+  }
+
+  .container {
+    margin: 0 10vw;
+  }
+
+  .container-menu {
+    flex-flow: row;
+  }
+
+  .box {
+    align-items: center;
+  }
+
+  .line-menu {
+    width: 1px;
+    height: auto;
+    margin: 0 2.5em;
+  }
+
+  .distance-from-top {
+    display: block;
+  }
+
+  .distance-from-top > .line {
+    width: 0.5em;
+    margin: 0 0 0.25em;
+  }
+}
+/*** Media Querry Medium ***/
+@media (min-width: 60em) {
+  .line-menu {
+    margin: 0 10vw;
+  }
+}
+/******* BOTTOM PART ********/
+/* Cursor Pointer*/
+li,
+.logo,
+.button,
+.toogler,
+.select,
+.link,
+.checkbox-row,
+.box-alert,
+.input-icon {
+  cursor: pointer;
+}
+
+/* hover effects */
+.toogler:hover,
+.button:hover {
+  background: #dabfa4;
+  color: white;
+}
+
+.select:hover {
+  background-color: rgba(0, 0, 0, 0.0666666667);
+}
+
+li:hover .earn-bonus {
+  border: 1px solid #dabfa4;
+}
+
+.input:hover {
+  border-color: #dabfa4;
+}
+
+.input-locked:hover {
+  border: 1px solid #ddd;
+}
+
+.input-icon:hover {
+  fill: #dabfa4;
+}
+
+/* extra stuff */
+.column {
+  flex-flow: column;
+}
