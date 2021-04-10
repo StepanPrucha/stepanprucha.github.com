@@ -1,8 +1,6 @@
 @charset "UTF-8";
 /* Separate HTML pages */
-#html-home-page {
-  //  display: none;
-}
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&display=swap");
 #html-login,
 #html-checkout,
 #html-success,
@@ -16,25 +14,8 @@
 }
 
 /* Media Queries */
-$mq-xsmall: "(min-width: 20em)"; // 320px
-$mq-small: "(min-width: 40em)"; // 640px
-$mq-medium: "(min-width: 60em)"; // 960px
-$mq-large: "(min-width: 80em)"; // 1280px
-$mq-xlarge: "(min-width: 100em)"; // 1600px
-
 /* Font */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&display=swap");
-
 /* Colors */
-$main: #d3b392;
-$high: #dabfa4;
-$silk: #eee;
-$mist: #ddd;
-$platinum: #999;
-$silver: #777;
-$charcoal: #333;
-$light: rgba(0, 0, 0, 0.0666);
-
 /* Default */
 * {
   box-sizing: border-box;
@@ -44,7 +25,7 @@ $light: rgba(0, 0, 0, 0.0666);
   font-family: Montserrat, sans-serif;
   font-weight: 400;
   letter-spacing: 0.025em;
-  color: $charcoal;
+  color: #333;
 }
 
 /*
@@ -62,17 +43,16 @@ $light: rgba(0, 0, 0, 0.0666);
 ::-webkit-scrollbar-thumb:hover {
   background: $silver;
 } */
-
-
-
 .checkbox-row {
   display: flex;
   align-items: center;
   margin-bottom: 1.5em;
 }
+
 .checkbox-row:last-child {
   margin-bottom: 0 !important;
 }
+
 .checkbox,
 .checkmark {
   width: 1.5em;
@@ -87,14 +67,14 @@ $light: rgba(0, 0, 0, 0.0666);
 }
 
 .checkbox-row:hover {
-  color: $high;
-  .checkbox {
-    border: 1px solid $high;
-  }
+  color: #dabfa4;
+}
+.checkbox-row:hover .checkbox {
+  border: 1px solid #dabfa4;
 }
 
 .checkmark {
-  stroke: $main;
+  stroke: #d3b392;
   display: none;
 }
 
@@ -102,13 +82,9 @@ $light: rgba(0, 0, 0, 0.0666);
   display: block;
 }
 
-
-
 /* recommend */
 .container-referral-stats {
-  background: linear-gradient(180deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)),
-    url("https://i.ibb.co/BNMMpGn/Soul-Cacao-Ceremony.jpg") top 45% center /
-      cover no-repeat;
+  background: linear-gradient(180deg, black, rgba(0, 0, 0, 0)), url("https://i.ibb.co/BNMMpGn/Soul-Cacao-Ceremony.jpg") top 45% center/cover no-repeat;
   padding: 1.5em 0 1.5em 1em;
   filter: grayscale(40%);
   flex-flow: row wrap;
@@ -116,40 +92,38 @@ $light: rgba(0, 0, 0, 0.0666);
   align-items: flex-start;
   align-content: flex-start;
   min-height: 60vh;
-  .block * {
-    color: white;
-  }
-  .block {
-    margin: 1.5em 1em 1.5em 0;
-    flex: 1;
-    min-width: 8em;
-  }
-  .block:first-child * {
-    color: $high;
-  }
-  @media #{$mq-small} {
+}
+.container-referral-stats .block * {
+  color: white;
+}
+.container-referral-stats .block {
+  margin: 1.5em 1em 1.5em 0;
+  flex: 1;
+  min-width: 8em;
+}
+.container-referral-stats .block:first-child * {
+  color: #dabfa4;
+}
+@media (min-width: 40em) {
+  .container-referral-stats {
     padding: 5vh 10vw;
-    .block {
-      margin: 5vh 1em 5vh 0;
-      flex: none;
-    }
-    .block:last-cild {
-      margin: 5vh 0;
-    }
+  }
+  .container-referral-stats .block {
+    margin: 5vh 1em 5vh 0;
+    flex: none;
+  }
+  .container-referral-stats .block:last-cild {
+    margin: 5vh 0;
   }
 }
-
-
 
 /***********************/
 /***********************/
 /********RESTART********/
 /***********************/
 /***********************/
-
-
 body {
-  background: $silk;
+  background: #eee;
   font-size: 1em;
 }
 
@@ -158,20 +132,19 @@ body {
 }
 
 /**** WRAPPER ****/
-
 .wrapper {
   display: flex;
   flex-flow: column;
   min-height: 100vh;
-  background: $silk;
+  background: #eee;
   width: 100%;
 }
 
 /* menu */
-
 .menu::-webkit-scrollbar {
   display: none;
 }
+
 .menu {
   position: fixed;
   z-index: 9;
@@ -182,7 +155,7 @@ body {
   overflow: auto;
   transition: 0.5s opacity, 0.5s top 0.5s;
   opacity: 0;
-  background: $silk;
+  background: #eee;
 }
 
 /**** SPACE ****/
@@ -190,14 +163,15 @@ body {
   height: 10vh;
   min-height: 5em;
   text-align: right;
-  padding: 1.3333333333333333em;
-  @media #{$mq-small} {
-    padding: 1.3333333333333333em 10vw;
+  padding: 1.3333333333em;
+}
+@media (min-width: 40em) {
+  .space {
+    padding: 1.3333333333em 10vw;
   }
 }
 
 /**** BOX ****/
-
 .box {
   display: flex;
   align-items: center;
@@ -215,7 +189,6 @@ body {
   align-items: flex-start;
 }
 
-
 /* main navigation bar */
 .nav-bar {
   position: fixed;
@@ -229,7 +202,9 @@ body {
 .nav-bar > .box {
   height: 3em;
   padding: 0 1em;
-  @media #{$mq-small} {
+}
+@media (min-width: 40em) {
+  .nav-bar > .box {
     padding: 0 10vw;
   }
 }
@@ -239,7 +214,7 @@ body {
 }
 
 .box-logo-menu {
-  background: rgba(204,204,204,0.6);
+  background: rgba(204, 204, 204, 0.6);
   -webkit-backdrop-filter: saturate(180%) blur(20px);
   backdrop-filter: saturate(180%) blur(20px);
 }
@@ -254,9 +229,7 @@ body {
   align-items: flex-start;
 }
 
-
 /**** CONTAINER ****/
-
 .container {
   flex: 1;
   display: flex;
@@ -270,8 +243,7 @@ body {
 }
 
 .banner-1 {
-  background: url("https://i.ibb.co/KGrsGVd/cocoa-1.jpg") center / cover
-    no-repeat;
+  background: url("https://i.ibb.co/KGrsGVd/cocoa-1.jpg") center/cover no-repeat;
 }
 
 .banner-1 > .base {
@@ -281,9 +253,7 @@ body {
   text-align: center;
 }
 
-
 /**** BASE ****/
-
 .base {
   flex: 1;
   margin: 2em 0;
@@ -310,11 +280,8 @@ body {
   margin-bottom: 0;
 }
 
-
 /**** TYPOGRAPHY ****/
-
 /* Font size*/
-
 .headline {
   font-size: 1.75em;
 }
@@ -354,7 +321,6 @@ body {
 }
 
 /* font weight*/
-
 .headline {
   font-weight: 300;
 }
@@ -364,7 +330,6 @@ li,
 .stat {
   font-weight: 400;
 }
-
 
 .product-name,
 .profile-name {
@@ -380,7 +345,6 @@ li,
 }
 
 /* letter spacing */
-
 .logo {
   letter-spacing: 0.5em;
 }
@@ -397,45 +361,38 @@ li,
 }
 
 /* colors */
-
 .space,
 .distance-from-top,
 .paragraph,
 .product-short-info,
 .select-quantity {
-  color: $silver;
+  color: #777;
 }
 
 /* solo */
-
 .headline {
   color: currentColor;
-//  margin-bottom: 0.8571428571428571em; // 24px  
 }
 
 /* text transform uppercase */
-
 .logo,
 .button-2 {
   text-transform: uppercase;
 }
 
-
 .stat {
-  margin-top: 0.2857142857142857em; // 4px;
-  color: $silver;
+  margin-top: 0.2857142857em;
+  color: #777;
 }
 
 .label {
-  color: $silver;
-  margin-bottom: 0.6666666666666666em !important;
+  color: #777;
+  margin-bottom: 0.6666666667em !important;
 }
 
 /* select + input + button + toogler */
-
 .select,
-.input
-.button {
+.input .button {
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
@@ -444,13 +401,12 @@ li,
 .footer > .select-language,
 .input,
 .button {
-  line-height: 2.2857142857142856em;
-  height: 2.2857142857142856em;
+  line-height: 2.2857142857em;
+  height: 2.2857142857em;
   color: currentColor;
 }
 
 /* toogler */
-
 .toogler {
   line-height: 1.75em;
   height: 1.75em;
@@ -460,19 +416,18 @@ li,
 }
 
 .toogler-buy {
-  background: $main;
+  background: #d3b392;
   color: white;
 }
 
 /* button */
-
 .button {
   padding: 0 3em;
   text-align: center;
 }
 
 .button-1, .button-1:active {
-  background: $main;
+  background: #d3b392;
   color: white;
 }
 
@@ -481,12 +436,11 @@ li,
 }
 
 .button-3, .button-3:active {
-  background: $charcoal;
+  background: #333;
   color: white;
 }
 
 /* select */
-
 .select {
   border: 0;
   border-radius: 0;
@@ -501,41 +455,38 @@ li,
 }
 
 .select-quantity {
-  background: url("https://i.ibb.co/wR1pZx7/down-arrow-biege.png") right 0.25em top 50% / 1.75em no-repeat;
+  background: url("https://i.ibb.co/wR1pZx7/down-arrow-biege.png") right 0.25em top 50%/1.75em no-repeat;
 }
 
 .select-language {
-  background: url("https://i.ibb.co/gVwYX7H/down-arrow-silver.png") right 0.25em
-    top 50% / 1.75em no-repeat;
+  background: url("https://i.ibb.co/gVwYX7H/down-arrow-silver.png") right 0.25em top 50%/1.75em no-repeat;
   margin: 0.375em auto 0.375em -0.625em;
 }
 
 .footer > .select-language {
-  margin: 1em 1.3333333333333333em; /* 12px 16px */
-  color: $silver;
+  margin: 1em 1.3333333333em;
+  /* 12px 16px */
+  color: #777;
 }
 
 /* inputs */
-
 .input {
-  padding: 0 0.8571428571428571em; /* 0 12px */
-  border: 1px solid $charcoal;
+  padding: 0 0.8571428571em;
+  /* 0 12px */
+  border: 1px solid #333;
   outline: none;
   background: white;
   width: 100%;
   overflow: hidden;
 }
 
-.input-with-icon {
-}
-
 .input-locked {
-  border: 1px solid $mist;
-  background: $mist;
+  border: 1px solid #ddd;
+  background: #ddd;
 }
 
 .input-icon {
-  fill: $charcoal;
+  fill: #333;
   width: 2em;
   height: 2em;
   margin-left: -2em;
@@ -543,7 +494,6 @@ li,
 }
 
 /* lists - main menu links */
-
 ul {
   list-style: none;
 }
@@ -555,19 +505,18 @@ li {
 .earn-bonus {
   background: white;
   margin: -0.25em 0 -0.25em 1.5em;
-  padding: 0.33333333333333333em 1em 0.4166666666666667em;
+  padding: 0.3333333333em 1em 0.4166666667em;
   text-align: center;
   color: currentColor;
-  border: 1px solid $main;
+  border: 1px solid #d3b392;
 }
 
 .link {
   text-decoration: underline;
-  color: $silver;
+  color: #777;
 }
 
 /* Small Elements */
-
 /* Line */
 .line {
   height: 1px;
@@ -585,7 +534,7 @@ li {
 }
 
 .block > * {
-  margin-bottom: 0.5em; 
+  margin-bottom: 0.5em;
 }
 
 .block > :last-child {
@@ -593,14 +542,13 @@ li {
 }
 
 /* gap */
-
 .gap {
   width: 1em;
 }
 
 /* distance from top = bottom-left fancy indicator */
 .distance-from-top {
-  padding: 1.3333333333333333em;
+  padding: 1.3333333333em;
   position: fixed;
   left: 0;
   bottom: 0;
@@ -616,8 +564,7 @@ li {
   height: 10vw;
   max-width: 8em;
   max-height: 8em;
-  background: url("https://i.ibb.co/HqFRvhN/cacao-crystal.jpg") center / cover
-    no-repeat;
+  background: url("https://i.ibb.co/HqFRvhN/cacao-crystal.jpg") center/cover no-repeat;
 }
 
 .profile-pic {
@@ -630,9 +577,7 @@ li {
   margin-left: 1em;
 }
 
-
 /**** FOOTER ****/
-
 .footer {
   padding: 1.5em 0;
   display: flex;
@@ -642,8 +587,9 @@ li {
 }
 
 .copyright {
-  margin: 1em 1.3333333333333333em; /* 12px 16px */
-  color: $silver;
+  margin: 1em 1.3333333333em;
+  /* 12px 16px */
+  color: #777;
   text-align: center;
 }
 
@@ -652,57 +598,49 @@ li {
 /**** MEDIA QUERRY ****/
 /**********************/
 /**********************/
-
-@media #{$mq-small} {
-  
+@media (min-width: 40em) {
   .base {
     margin: 2.5em auto;
   }
-  
+
   .line {
     margin: 1.5em 0;
   }
-  
+
   .container {
     margin: 0 10vw;
   }
-  
+
   .container-menu {
     flex-flow: row;
   }
-  
+
   .box {
     align-items: center;
   }
-  
+
   .line-menu {
     width: 1px;
     height: auto;
     margin: 0 2.5em;
   }
-  
+
   .distance-from-top {
     display: block;
   }
-  
+
   .distance-from-top > .line {
     width: 0.5em;
     margin: 0 0 0.25em;
   }
-  
 }
-
 /*** Media Querry Medium ***/
-
-@media #{$mq-medium} {
+@media (min-width: 60em) {
   .line-menu {
     margin: 0 10vw;
   }
 }
-
-
 /******* BOTTOM PART ********/
-
 /* Cursor Pointer*/
 li,
 .logo,
@@ -717,43 +655,40 @@ li,
 }
 
 /* hover effects */
-
 .toogler:hover,
 .button:hover {
-  background: $high;
+  background: #dabfa4;
   color: white;
 }
 
 .select:hover {
-  background-color: rgba(0, 0, 0, 0.0666666666666666);
+  background-color: rgba(0, 0, 0, 0.0666666667);
 }
 
 li:hover .earn-bonus {
-  border: 1px solid $high;
+  border: 1px solid #dabfa4;
 }
 
 .input:hover {
-  border-color: $high;
+  border-color: #dabfa4;
 }
+
 .input-locked:hover {
-  border: 1px solid $mist;
+  border: 1px solid #ddd;
 }
 
 .input-icon:hover {
-  fill: $high;
+  fill: #dabfa4;
 }
 
 a:hover,
 .link:hover,
 .logo:hover,
 li:hover {
-  color: $high;
+  color: #dabfa4;
 }
 
 /* extra stuff */
-
 .column {
   flex-flow: column;
 }
-
-

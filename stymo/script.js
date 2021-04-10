@@ -211,4 +211,3 @@ function copyID() {
   clearTimeout(timerTwo);
   timerTwo = setTimeout(hideAlert, 5000);
 }
-
