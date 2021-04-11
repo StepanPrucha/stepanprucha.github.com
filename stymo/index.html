@@ -22,74 +22,87 @@
       <div class="logo" onclick="goHome()">Stymo</div>
       <div class="toogler" id="toogler" onclick="toogleMenu()">Menu</div>
     </div>
-    <div class="box box-alert" id="alert" onclick="hideAlert()">
-      Details saved.
-    </div>
   </div>
-  
+
+  <div class="box box-alert" id="alert" onclick="hideAlert()">
+    Details saved.
+  </div>
+
   <div class="menu" id="menu">
     <div class="wrapper">
-    <div class="space"></div>
-    <div class="container container-menu">
-      <div class="base base-checkout">
-        <div class="box spacy box-product-info">
-          <div class="block">
-            <h3 class="product-name">Stymo</h3>
-            <p class="product-short-info">The cocoa protein.</p>
+      <div class="space"></div>
+      <div class="container container-menu">
+        <div class="base base-checkout">
+          <div class="box spacy box-product-info">
+            <div class="block">
+              <h3 class="product-name">Stymo</h3>
+              <p class="product-short-info">The cocoa protein.</p>
+            </div>
+            <div class="menu-product-image"></div>
           </div>
-          <div class="menu-product-image"></div>
-        </div>
-        <div class="box spacy box-quantity-and-price">
-          <select class="select select-quantity" id="quantity" onchange="calc();quantitySecondary.value=this.value">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option>
-            <option value="11">11</option>
-            <option value="12">12</option>
-            <option value="13">13</option>
-            <option value="14">14</option>
-            <option value="15">15</option>
-          </select>
-          <div class="summary">
-            <span class="currency-sign">€</span>
-            <span class="price" id="total">89</span>
-            <span class="currency-ticker">/EUR</span>
+          <div class="box spacy box-quantity-and-price">
+            <div class="box">
+              <select class="select select-quantity" id="quantity" onchange="calc();quantitySecondary.value=this.value">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+              </select>
+              <svg class="icon icon-right icon-stroke-high" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                <path d="M9 12.5L16 19.5L23 12.5" stroke-width="2" />
+              </svg>
+            </div>
+            <div class="summary">
+              <span class="currency-sign">€</span>
+              <span class="price" id="total">89</span>
+              <span class="currency-ticker">/EUR</span>
+            </div>
           </div>
+          <div class="button button-1">Checkout</div>
         </div>
-        <div class="button button-1">Checkout</div>
+        <div class="line line-menu"></div>
+        <ul class="base base-main-menu">
+          <li onclick="goHome()">Home</li>
+          <li onclick="goToAccount()">Account</li>
+          <li onclick="goToOrders()">Orders</li>
+          <li class="box" onclick="goToRecommend()">Recommend<div class="earn-bonus">Earn bonus</div>
+          </li>
+          <li onclick="goToLogin()" id="login-link">Log in</li>
+          <li>FAQ</li>
+          <li>About</li>
+          <div class="box language-menu">
+            <svg class="icon icon-left icon-stroke" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+              <circle cx="16" cy="16" r="8" stroke="black" />
+              <ellipse cx="16" cy="16" rx="3" ry="8" stroke="black" />
+              <path d="M8 16H24" stroke="black" />
+            </svg>
+            <select class="select select-language">
+              <option value="english">English</option>
+              <option value="czech">Česko</option>
+              <option value="german">Deutch</option>
+            </select>
+          </div>
       </div>
-      <div class="line line-menu"></div>
-      <ul class="base base-main-menu">
-        <li onclick="goHome()">Home</li>
-        <li onclick="goToAccount()">Account</li>
-        <li onclick="goToOrders()">Orders</li>
-        <li class="box" onclick="goToRecommend()">Recommend<div class="earn-bonus">Earn bonus</div>
-        </li>
-        <li onclick="goToLogin()" id="login-link">Log in</li>
-        <li>FAQ</li>
-        <li>About</li>
-        <select class="select select-language">
-          <option value="english">English</option>
-          <option value="czech">Česko</option>
-          <option value="german">Deutch</option>
-        </select>
       </ul>
     </div>
     <div class="space"></div>
     <div class="footer">
-
       <div class="copyright">© Novstar 2021 - All rights reserved.</div>
     </div>
   </div>
   </div>
-  
+
   <div class="wrapper wrapper-home" id="html-home-page">
     <div class="distance-from-top">
       <div class="line"></div>
@@ -120,9 +133,9 @@
         <label class="label" for="email">Email</label>
         <input class="input" name="email" id="email"></input>
         <label class="label" for="password">Password</label>
-        <div class="box input-with-icon">
+        <div class="box">
           <input class="input" name="password" id="password"></input>
-          <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" fill="none">
+          <svg class="icon icon-right icon-fill" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" fill="none">
             <path xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" d="M15 9C10.8994 9 7.3752 11.4682 5.83209 15C7.37521 18.5318 10.8994 21 15 21C19.1006 21 22.6248 18.5318 24.1679 15C22.6248 11.4682 19.1006 9 15 9ZM15 18C16.6569 18 18 16.6569 18 15C18 13.3431 16.6569 12 15 12C13.3431 12 12 13.3431 12 15C12 16.6569 13.3431 18 15 18Z" />
           </svg>
         </div>
@@ -135,11 +148,18 @@
     </div>
     <div class="space"></div>
     <div class="footer">
-      <select class="select select-language">
-        <option value="english">English</option>
-        <option value="czech">Česko</option>
-        <option value="german">Deutch</option>
-      </select>
+      <div class="box">
+        <svg class="icon icon-left icon-stroke" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+          <circle cx="16" cy="16" r="8" stroke="black" />
+          <ellipse cx="16" cy="16" rx="3" ry="8" stroke="black" />
+          <path d="M8 16H24"/>
+        </svg>
+        <select class="select select-language">
+          <option value="english">English</option>
+          <option value="czech">Česko</option>
+          <option value="german">Deutch</option>
+        </select>
+      </div>
       <div class="copyright">© Novstar 2021 - All rights reserved.</div>
     </div>
 
@@ -179,7 +199,7 @@
       <div class="line"></div>
       <div class="base">
         <h1 class="headline">Account settings</h1>
-        <div class="box box-name">
+        <div class="box spacy box-name">
           <h3 class="subheadline">Login details</h3>
           <div class="link">Change</div>
         </div>
@@ -189,7 +209,7 @@
         <input class="input input-locked" name="password" placeholder="●●●●●●●●" disabled></input>
       </div>
       <div class="base">
-        <div class="checkbox-row checked" onclick="subscribeNews()" id="subscribe-newsletter">
+        <div class="box box-checkbox checked" onclick="subscribeNews()" id="subscribe-newsletter">
           <div class="checkbox">
             <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
               <path d="M5 12L9.5 16.5L18.5 7.5" stroke-width="2" />
@@ -197,7 +217,7 @@
           </div>
           Subcribe to the newsletter.
         </div>
-        <div class="checkbox-row" onclick="displayPriceWithTax()" id="display-price-with-tax">
+        <div class="box box-checkbox" onclick="displayPriceWithTax()" id="display-price-with-tax">
           <div class="checkbox">
             <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
               <path d="M5 12L9.5 16.5L18.5 7.5" stroke-width="2" />
@@ -207,17 +227,17 @@
         </div>
       </div>
       <div class="base">
-        <div class="box box-name">
+        <div class="box spacy box-name">
           <h3 class="subheadline">Shipping address</h3>
           <div class="link">Change</div>
         </div>
         <div class="box">
-          <div class="box-2">
+          <div class="block">
             <label class="label" for="name">First name</label>
             <input class="input input-locked" name="name" placeholder="Stepan" disabled></input>
           </div>
           <div class="gap"></div>
-          <div class="box-2">
+          <div class="block">
             <label class="label" for="lastname">Last name</label>
             <input class="input input-locked" name="lastname" placeholder="Prucha" disabled></input>
           </div>
@@ -225,19 +245,19 @@
         <label class="label" for="address">Adress</label>
         <input class="input input-locked" name="adress" placeholder="Ricanska 1000/29" disabled></input>
         <div class="box">
-          <div class="box-2">
+          <div class="block">
             <label class="label" for="zip">Zip code</label>
             <input class="input input-locked" name="zip" placeholder="64100" disabled></input>
           </div>
           <div class="gap"></div>
-          <div class="box-2">
+          <div class="block">
             <label class="label" for="city">City / Town</label>
             <input class="input input-locked" name="city" placeholder="Brno" disabled></input>
           </div>
         </div>
         <label class="label" for="phone">Phone</label>
         <input class="input input-locked" name="phone" placeholder="+420 601 229 199" disabled></input>
-        <div class="checkbox-row checked" onclick="invoiceIsSame()" id="checkbox-row-invoice-is-same">
+        <div class="box box-checkbox checked" onclick="invoiceIsSame()" id="invoice-is-same">
           <div class="checkbox">
             <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
               <path d="M5 12L9.5 16.5L18.5 7.5" stroke-width="2" />
@@ -251,20 +271,22 @@
         <div class="link link-delete">Delete account</div>
       </div>
     </div>
-
     <div class="space"></div>
-
     <div class="footer">
-      <select class="select select-language">
-        <option value="english">English</option>
-        <option value="czech">Česko</option>
-        <option value="german">Deutch</option>
-      </select>
-      <div class="copyright">
-        © Novstar 2021 - All rights reserved.
+      <div class="box">
+        <svg class="icon icon-left icon-stroke" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+          <circle cx="16" cy="16" r="8" stroke="black" />
+          <ellipse cx="16" cy="16" rx="3" ry="8" stroke="black" />
+          <path d="M8 16H24"/>
+        </svg>
+        <select class="select select-language">
+          <option value="english">English</option>
+          <option value="czech">Česko</option>
+          <option value="german">Deutch</option>
+        </select>
       </div>
+      <div class="copyright">© Novstar 2021 - All rights reserved.</div>
     </div>
-
   </div>
 
   <div class="wrapper" id="html-orders">
@@ -272,15 +294,20 @@
     <div class="form">1</div>
     <div class="form">2</div>
     <div class="space"></div>
-    <div class="footer-copyright">
-      <select class="select select-language">
-        <option value="english">English</option>
-        <option value="czech">Česko</option>
-        <option value="german">Deutch</option>
-      </select>
-      <div class="copyright">
-        © Novstar 2021 - All rights reserved.
+    <div class="footer">
+      <div class="box input-language">
+        <svg class="icon icon-left icon-stroke" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+          <circle cx="16" cy="16" r="8" stroke="black" />
+          <ellipse cx="16" cy="16" rx="3" ry="8" stroke="black" />
+          <path d="M8 16H24" stroke="black" />
+        </svg>
+        <select class="select select-language">
+          <option value="english">English</option>
+          <option value="czech">Česko</option>
+          <option value="german">Deutch</option>
+        </select>
       </div>
+      <div class="copyright">© Novstar 2021 - All rights reserved.</div>
     </div>
   </div>
 
@@ -343,12 +370,19 @@
     </div>
     <div class="line"></div>
     <div class="space"></div>
-    <div class="footer-copyright">
-      <select class="select select-language">
-        <option value="english">English</option>
-        <option value="czech">Česko</option>
-        <option value="german">Deutch</option>
-      </select>
+    <div class="footer">
+      <div class="box">
+        <svg class="icon icon-left icon-stroke" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+          <circle cx="16" cy="16" r="8" stroke="black" />
+          <ellipse cx="16" cy="16" rx="3" ry="8" stroke="black" />
+          <path d="M8 16H24"/>
+        </svg>
+        <select class="select select-language">
+          <option value="english">English</option>
+          <option value="czech">Česko</option>
+          <option value="german">Deutch</option>
+        </select>
+      </div>
       <div class="copyright">© Novstar 2021 - All rights reserved.</div>
     </div>
   </div>

@@ -4,6 +4,12 @@ var previousScroll = 0;
 var timer;
 var toogler = document.getElementById("toogler");
 
+
+window.onscroll = function () {
+  var currentScroll = window.scrollY;
+  document.getElementById("tell-current").innerHTML = currentScroll;
+}
+/*
 window.onscroll = function () {
   var currentScroll = window.scrollY;
   document.getElementById("tell-current").innerHTML = currentScroll;
@@ -23,11 +29,11 @@ window.onscroll = function () {
   } else {
     toogler.className = "toogler";
     toogler.innerHTML = "Menu";
-  } */
+  } 
 };
 function reset() {
   navBar.style.top = null;
-}
+} */
 
 /* Toogle Menu */
 var menu = document.getElementById("menu");
@@ -35,7 +41,7 @@ var body = document.getElementById("body");
 var menuOpen = 0;
 function hideMenu() {
   menu.style.transition = null;
-  menu.style.top = null;
+  menu.style.right = null;
   menu.style.opacity = null;
   body.style.overflow = null;
   toogler.innerHTML = "Menu";
@@ -46,7 +52,7 @@ function toogleMenu() {
     hideMenu();
   } else {
     menu.style.transition = "0.5s opacity";
-    menu.style.top = "0";
+    menu.style.right = "0";
     menu.style.opacity = "1";
     body.style.overflow = "hidden";
     toogler.className = "toogler";
@@ -105,7 +111,13 @@ function goToAccount() {
   goHome();
   home.style.display = "none";
   if (loggedIn == 1){
-    account.style.display = "flex"; 
+    account.style.display = "flex";
+    
+    /* Alert Message*/
+    alert.innerHTML = "Login successful.";
+    alert.style.display = "flex";
+    clearTimeout(timerTwo);
+    timerTwo = setTimeout(hideAlert, 5000);
   } else {
     login.style.display = "flex"; 
   }
@@ -153,8 +165,8 @@ function hideAlert() {
 }
 function subscribeNews() {
   var x = document.getElementById("subscribe-newsletter");
-  if (x.className == "checkbox-row checked") {
-    x.className = "checkbox-row";
+  if (x.className == "box box-checkbox checked") {
+    x.className = "box box-checkbox";
 
     /* Alert Message*/
     alert.innerHTML = "Unsubscribed.";
@@ -162,7 +174,7 @@ function subscribeNews() {
     clearTimeout(timerTwo);
     timerTwo = setTimeout(hideAlert, 5000);
   } else {
-    x.className = "checkbox-row checked";
+    x.className = "box checkbox-row checked";
     /* Alert */
     alert.innerHTML = "Subscribed.";
     alert.style.display = "flex";
@@ -172,15 +184,15 @@ function subscribeNews() {
 }
 function displayPriceWithTax() {
   var y = document.getElementById("display-price-with-tax");
-  if (y.className == "checkbox-row checked") {
-    y.className = "checkbox-row";
+  if (y.className == "box box-checkbox checked") {
+    y.className = "box box-checkbox";
     /* Alert */
     alert.innerHTML = "Prices without tax.";
     alert.style.display = "flex";
     clearTimeout(timerTwo);
     timerTwo = setTimeout(hideAlert, 5000);
   } else {
-    y.className = "checkbox-row checked";
+    y.className = "box box-checkbox checked";
     /* Alert */
     alert.innerHTML = "Prices with tax.";
     alert.style.display = "flex";
@@ -189,11 +201,11 @@ function displayPriceWithTax() {
   }
 }
 function invoiceIsSame() {
-  var z = document.getElementById("checkbox-row-invoice-is-same");
-  if (z.className == "checkbox-row checked") {
-    z.className = "checkbox-row";
+  var z = document.getElementById("invoice-is-same");
+  if (z.className == "box box-checkbox checked") {
+    z.className = "box box-checkbox";
   } else {
-    z.className = "checkbox-row checked";
+    z.className = "box box-checkbox checked";
   }
 }
 /* Copy Links */
