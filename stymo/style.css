@@ -11,7 +11,7 @@
 }
 
 body {
-  background: #eee;
+  background: #ddd;
   font-size: 1em;
   min-width: 15em;
   display: flex;
@@ -53,10 +53,10 @@ body {
 .space {
   font-size: 1em;
   min-height: 1.5em;
-  height: 4vh;
+  height: 5vh;
 }
 
-.wrapper-home > .space {
+.space-with-number {
   font-size: 0.75em;
   min-height: 2em;
   height: 10vh;
@@ -65,7 +65,7 @@ body {
   line-height: 2.6666666667em;
 }
 @media (min-width: 40em) {
-  .wrapper-home > .space {
+  .space-with-number {
     padding: 0 10vw;
   }
 }
@@ -92,11 +92,11 @@ body {
 .base {
   flex: 1;
   width: 100%;
-  max-width: 40em;
+  max-width: 30em;
   display: flex;
   flex-flow: column;
   justify-content: center;
-  margin: 1.5em 0;
+  margin: 1.5em auto;
 }
 @media (min-width: 40em) {
   .base {
@@ -120,7 +120,7 @@ body {
 }
 @media (min-width: 60em) {
   .line {
-    margin: 3em 0;
+    margin: 4.5em 0;
   }
 }
 
@@ -134,18 +134,30 @@ li {
 }
 
 li:hover {
-  color: peru;
+  opacity: 0.6;
 }
 
 .earn-bonus {
   font-size: 0.75em;
   background: white;
-  margin: -0.25em 0 -0.25em 0.6666666667em;
+  margin: -0.25em 0 -0.25em 1em;
   padding: 0.3333333333em 1em 0.4166666667em;
   text-align: center;
   color: currentColor;
   border: 1px solid #6ec3f7;
-  border-radius: 4px;
+  border-radius: 2px;
+}
+
+.log-out-icon {
+  margin-left: 0.75em;
+}
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: block;
 }
 
 .link {
@@ -156,7 +168,7 @@ li:hover {
 }
 
 .link:hover {
-  color: peru;
+  opacity: 0.6;
 }
 
 .link-delete {
@@ -190,7 +202,7 @@ li:hover {
 }
 
 .icon-stroke-high {
-  stroke: peru;
+  stroke: #42b8ff;
   fill: none;
 }
 
@@ -209,12 +221,12 @@ li:hover {
   outline: none;
   background: none;
   border: 0;
-  border-radius: 4px;
+  border-radius: 2px;
   cursor: pointer;
 }
 
 .select:hover {
-  color: peru;
+  color: #777;
   background-color: rgba(0, 0, 0, 0.0666666667);
 }
 
@@ -238,8 +250,9 @@ li:hover {
   letter-spacing: 0.05em;
   line-height: 2.5em;
   font-weight: 400;
+  padding: 0 0.75em;
   border: 1px solid #222;
-  border-radius: 4px;
+  border-radius: 2px;
   width: 100%;
   color: currentColor;
   -moz-appearance: none;
@@ -249,16 +262,23 @@ li:hover {
 }
 
 .input:hover {
-  border-color: peru;
+  border-color: #42b8ff;
+}
+
+.input-locked {
+  border: 1px solid #eee;
+  background: #eee;
+  cursor: default;
 }
 
 .input-locked:hover {
-  border: 1px solid #ddd;
+  border: 1px solid #eee;
 }
 
 .headline {
   color: currentColor;
   font-size: 1.75em;
+  letter-spacing: 0.0625em;
   font-weight: 300;
 }
 
@@ -266,6 +286,12 @@ li:hover {
 .paragraph,
 .product-short-info {
   font-size: 1em;
+  color: #777;
+}
+
+.product-short-info {
+  padding-bottom: 1.5em;
+  border-bottom: 2px solid DarkTurquoise;
 }
 
 .product-name,
@@ -294,6 +320,10 @@ li:hover {
   margin-bottom: 0.6666666667em !important;
 }
 
+.currency-ticker {
+  font-size: 0.5em;
+}
+
 .button {
   font-size: 1em;
   letter-spacing: 0.125em;
@@ -305,12 +335,12 @@ li:hover {
   appearance: none;
   line-height: 2em;
   color: currentColor;
-  border-radius: 4px;
+  border-radius: 2px;
   cursor: pointer;
 }
 
 .button:hover {
-  background: linear-gradient(#42b8ff, DarkTurquoise);
+  background: linear-gradient(#42b8ff, darkturquoise);
 }
 
 .button-1 {
@@ -374,14 +404,23 @@ li:hover {
   font-size: 1em;
   font-weight: 400;
   letter-spacing: 0.025em;
-  line-height: 1.5em;
+  line-height: 1.75em;
   margin: auto 0;
   padding: 0 0.75em;
-  background: linear-gradient(#42b8ff, DarkTurquoise);
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.toogler-default {
   color: white;
   border: 1px solid DarkTurquoise;
-  border-radius: 4px;
-  cursor: pointer;
+  background: linear-gradient(#777777, #333333);
+  border-color: #777;
+}
+
+.toogler-highlighted {
+  background: linear-gradient(#42b8ff, darkturquoise);
+  color: white;
 }
 
 .toogler:hover {
@@ -390,21 +429,17 @@ li:hover {
 }
 
 .toogler-close {
+  color: white;
+  border: 1px solid DarkTurquoise;
   background: linear-gradient(#777777, #333333);
-  border-color: #222;
+  border-color: #777;
 }
 
 .nav-bar {
-  position: sticky;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 2.75em;
-  z-index: 10;
-  background: rgba(204, 204, 204, 0.75);
-  -webkit-backdrop-filter: saturate(180%) blur(20px);
-  backdrop-filter: saturate(180%) blur(20px);
+  transition: 0.3s background;
   padding: 0 1em;
+  background: #ddd;
+  transition: 0.3s background;
 }
 @media (min-width: 40em) {
   .nav-bar {
@@ -412,17 +447,38 @@ li:hover {
   }
 }
 
+.glass-effect {
+  background: rgba(204, 204, 204, 0.7);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+}
+
+.sticky-menu {
+  position: sticky;
+  top: 0;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  max-height: 100vh;
+  transition: 0.5s box-shadow;
+}
+
 .box-alert {
+  font-size: 1em;
+  font-weight: 600;
+  letter-spacing: 0.025em;
   line-height: 2.25em;
   padding: 0 1em;
   z-index: 10;
   position: fixed;
-  top: 3em;
+  top: 2.75em;
   left: 0;
   width: 100%;
-  background: DarkTurquoise;
   color: white;
   display: none;
+  cursor: pointer;
+  background: linear-gradient(rgba(66, 184, 255, 0.7), rgba(0, 206, 209, 0.5));
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
 }
 @media (min-width: 40em) {
   .box-alert {
@@ -430,34 +486,33 @@ li:hover {
   }
 }
 
-.menu::-webkit-scrollbar {
+/* .menu::-webkit-scrollbar {
   display: none;
-}
-
+} */
 .menu {
-  position: fixed;
-  z-index: 9;
-  top: 0;
-  right: -100vw;
-  width: 100%;
-  height: 100%;
-  overflow-x: hidden;
-  overflow-y: scroll;
-  transition: 0.5s opacity, 0.5s right 0.5s;
-  opacity: 0;
-  background: linear-gradient(135deg, #eeeeee, #cccccc);
+  background: linear-gradient(135deg, #dddddd, #bfbfbf);
   display: flex;
   flex-flow: column;
+  overflow: hidden;
+  transition: height 0.5s;
+  height: 0;
 }
 
 .wrapper-menu {
-  padding: 2.75em 0 4em;
+  padding: 0 0 4em;
+}
+@media (min-width: 40em) {
+  .wrapper-menu {
+    padding: 1.5em 0;
+    min-height: calc(100vh - 2.75em);
+  }
 }
 
 @media (min-width: 40em) {
   .container-menu {
     flex: 1;
     flex-flow: row;
+    padding: 0;
   }
 }
 
@@ -474,7 +529,13 @@ li:hover {
   }
 }
 
+.menu-cart-icon {
+  display: none;
+  border-radius: 2px;
+}
+
 .menu-product-image {
+  display: none;
   margin-left: 1em;
   min-width: 5em;
   min-height: 5em;
@@ -483,7 +544,7 @@ li:hover {
   max-width: 8em;
   max-height: 8em;
   background: url("https://i.ibb.co/HqFRvhN/cacao-crystal.jpg") center/cover no-repeat;
-  border-radius: 4px;
+  border-radius: 2px;
 }
 
 .box-product-info {
@@ -496,7 +557,12 @@ li:hover {
 }
 
 .base-main-menu {
-  margin: 0.75em 0;
+  margin: 0.75em auto;
+}
+@media (min-width: 40em) {
+  .base-main-menu {
+    margin: 2.25em auto;
+  }
 }
 
 .base-main-menu > * {
@@ -529,6 +595,7 @@ li:hover {
 }
 
 .banner-1 {
+  min-height: 70vh;
   color: white;
   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url("https://i.ibb.co/KGrsGVd/cocoa-1.jpg") center/cover no-repeat;
 }
@@ -550,4 +617,68 @@ li:hover {
 #html-terms,
 #html-contact {
   display: none;
+}
+
+.profile-pic {
+  min-width: 5em;
+  min-height: 5em;
+  width: 20vw;
+  height: 20vw;
+  max-width: 8em;
+  max-height: 8em;
+  margin-left: 1em;
+  border-radius: 2px;
+}
+
+.box-user {
+  align-items: flex-start;
+}
+@media (min-width: 40em) {
+  .box-user {
+    align-items: center;
+  }
+}
+
+.gap {
+  width: 1em;
+}
+
+.block {
+  flex: 1;
+  display: flex;
+  flex-flow: column;
+}
+
+.box-checkbox {
+  cursor: pointer;
+}
+
+.box-checkbox:hover {
+  color: #42b8ff;
+}
+.box-checkbox:hover .checkbox {
+  border: 1px solid #42b8ff;
+}
+
+.checkbox,
+.checkmark {
+  width: 1.5em;
+  height: 1.5em;
+}
+
+.checkbox {
+  margin-right: 1em;
+  background: white;
+  border: 1px solid currentColor;
+  box-sizing: content-box;
+  border-radius: 2px;
+}
+
+.checkmark {
+  stroke: #6ec3f7;
+  display: none;
+}
+
+.checked .checkmark {
+  display: block;
 }

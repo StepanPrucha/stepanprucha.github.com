@@ -8,7 +8,13 @@ var toogler = document.getElementById("toogler");
 window.onscroll = function () {
   var currentScroll = window.scrollY;
   document.getElementById("tell-current").innerHTML = currentScroll;
-}
+  if (currentScroll > 5) {
+    navBar.className = ("nav-bar box spacy glass-effect");
+  } else {
+    navBar.className = ("nav-bar box spacy");
+  }
+};
+
 /*
 window.onscroll = function () {
   var currentScroll = window.scrollY;
@@ -39,28 +45,40 @@ function reset() {
 var menu = document.getElementById("menu");
 var body = document.getElementById("body");
 var menuOpen = 0;
+var stickymenu = document.getElementById("sticky-menu");
+
 function hideMenu() {
-  menu.style.transition = null;
-  menu.style.right = null;
-  menu.style.opacity = null;
-  body.style.overflow = null;
-  toogler.className = "toogler"
+  toogler.className = "toogler toogler-default";
   toogler.innerHTML = "Menu";
+  menu.style.height = null;
+  body.style.overflow = null;
+  navBar.style.transition = "0.3s background 0.5s";
+  navBar.style.background = null;
+  
+  stickymenu.style.boxShadow = null;
   menuOpen = 0;
+  setTimeout(reset, 500);
 }
+
+function reset() {
+  navBar.style.transition = "0.3s background";
+}
+
 function toogleMenu() {
   if (menuOpen == 1) {
     hideMenu();
   } else {
-    menu.style.transition = "0.5s opacity";
-    menu.style.right = "0";
-    menu.style.opacity = "1";
-    body.style.overflow = "hidden";
     toogler.className = "toogler toogler-close";
     toogler.innerHTML = "Close";
+    body.style.overflow = "hidden";
+  navBar.style.transition = "0s background";
+    navBar.style.background = "#dddddd";
+    menu.style.height = document.getElementById("menu-inner-height").offsetHeight + 'px';
+//    stickymenu.style.boxShadow = "0 0  5vh 100vh rgba(0, 0, 0, 0.5)";
     menuOpen = 1;
   }
 }
+
 
 /* Select quantity and calulate the price */
 function calc() {
@@ -145,12 +163,15 @@ function goToOrders() {
 /* Log in + Log out */
 var loggedIn = 0;
 var loginLink = document.getElementById("login-link");
+var logouticon = document.getElementById("log-out-icon");
 function logIn() {
+  logouticon.style.display = "block";
   loginLink.innerHTML = "Log out (Stepan Prucha)";
   loggedIn = 1;
   goToAccount();
 }
 function logOut() {
+  logouticon.style.display = null;
   loginLink.innerHTML = "Log in";
   loggedIn = 0;
   goHome();
