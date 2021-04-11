@@ -130,12 +130,6 @@ function goToAccount() {
   home.style.display = "none";
   if (loggedIn == 1){
     account.style.display = "flex";
-    
-    /* Alert Message*/
-    alert.innerHTML = "Login successful.";
-    alert.style.display = "flex";
-    clearTimeout(timerTwo);
-    timerTwo = setTimeout(hideAlert, 5000);
   } else {
     login.style.display = "flex"; 
   }
@@ -164,14 +158,26 @@ function goToOrders() {
 var loggedIn = 0;
 var loginLink = document.getElementById("login-link");
 var logouticon = document.getElementById("log-out-icon");
+var userName = document.getElementById("user-name");
 function logIn() {
   logouticon.style.display = "block";
-  loginLink.innerHTML = "Log out (Stepan Prucha)";
+  userName.style.display = "block";
+  loginLink.innerHTML = "Log out:";
   loggedIn = 1;
-  goToAccount();
+  toogleMenu();
+  
+  /* Alert Message*/
+    alert.innerHTML = "Login successful.";
+    alert.style.display = "flex";
+    clearTimeout(timerTwo);
+    timerTwo = setTimeout(hideAlert, 5000);
+  
+  setTimeout(goHome, 500);
+  setTimeout(toogleMenu, 500);
 }
 function logOut() {
   logouticon.style.display = null;
+  userName.style.display = null;
   loginLink.innerHTML = "Log in";
   loggedIn = 0;
   goHome();
