@@ -128,8 +128,8 @@ body {
 }
 
 .line {
-  height: 1px;
-  background: currentColor;
+  height: 2px;
+  background: #777;
   width: auto;
   margin: 1.5em 0;
 }
@@ -144,12 +144,13 @@ ul {
 }
 
 li {
-  padding: 0.75em 0;
+  padding: 1em 0;
   cursor: pointer;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.0666);
 }
 
-li:hover {
-  opacity: 0.6;
+li:hover, li:hover * {
+  color: #777;
 }
 
 .earn-bonus {
@@ -160,7 +161,8 @@ li:hover {
   padding: 0.3333333333em 1em 0.4166666667em;
   text-align: center;
   color: currentColor;
-  border: 1px solid #6ec3f7;
+  border: 2px solid;
+  border-color: #42b8ff;
   border-radius: 2px;
 }
 
@@ -178,13 +180,14 @@ li:hover {
 
 .link {
   font-size: 1em;
+  font-weight: 400;
   text-decoration: underline;
   color: #777;
   cursor: pointer;
 }
 
 .link:hover {
-  opacity: 0.6;
+  color: #42b8ff;
 }
 
 .link-delete {
@@ -275,10 +278,14 @@ li:hover {
 }
 
 .language-menu {
-  margin: 0.375em auto 0.375em -0.625em;
+  margin: 0.375em auto 0.375em -0.5em;
 }
 .language-menu .select-language {
-  padding: 0 2.5em 0 0.75em;
+  padding: 0 0.75em 0 2.5em;
+}
+
+.language-menu > .select:hover {
+  background: none;
 }
 
 .input {
@@ -287,7 +294,8 @@ li:hover {
   line-height: 2.5em;
   font-weight: 400;
   padding: 0 0.75em;
-  border: 1px solid #222;
+  border: 2px solid;
+  border-color: #777;
   border-radius: 2px;
   width: 100%;
   color: currentColor;
@@ -302,13 +310,10 @@ li:hover {
 }
 
 .input-locked {
-  border: 1px solid #eee;
+  border: 2px solid;
+  border-color: #eee;
   background: #eee;
   cursor: default;
-}
-
-.input-locked:hover {
-  border: 1px solid #eee;
 }
 
 .headline {
@@ -336,6 +341,11 @@ li:hover {
   font-size: 1.5em;
 }
 
+.number {
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
 .profile-name,
 .product-name {
   margin-bottom: 0.5em;
@@ -358,6 +368,7 @@ li:hover {
 
 .label {
   font-size: 0.75em;
+  letter-spacing: 0.05em;
   color: #777;
   margin-bottom: 0.6666666667em !important;
 }
@@ -387,25 +398,29 @@ li:hover {
 
 .button-1 {
   background: linear-gradient(DarkTurquoise, #42b8ff);
-  border: 1px solid DarkTurquoise;
+  border: 2px solid;
+  border-color: DarkTurquoise;
   color: white;
   line-height: 2.5em;
 }
 
 .button-2 {
   text-transform: uppercase;
-  border: 1px solid currentColor;
+  border: 2px solid;
+  border-color: currentColor;
 }
 
 .button-3 {
   background: linear-gradient(#777777, #333333);
   color: white;
   line-height: 2.5em;
-  border: 1px solid #222;
+  border: 2px solid;
+  border-color: #777;
 }
 
 .button-3:hover {
-  border: 1px solid DarkTurquoise;
+  border: 2px solid;
+  border-color: DarkTurquoise;
 }
 
 .distance-from-top {
@@ -443,7 +458,7 @@ li:hover {
 }
 
 .toogler {
-  font-size: 1em;
+  font-size: 0.875em;
   font-weight: 400;
   letter-spacing: 0.025em;
   line-height: 1.75em;
@@ -455,7 +470,7 @@ li:hover {
 
 .toogler-default {
   color: white;
-  border: 1px solid DarkTurquoise;
+  border: 2px solid;
   background: linear-gradient(#777777, #333333);
   border-color: #777;
 }
@@ -472,13 +487,13 @@ li:hover {
 
 .toogler-close {
   color: white;
-  border: 1px solid DarkTurquoise;
+  border: 2px solid;
+  border-color: DarkTurquoise;
   background: linear-gradient(#777777, #333333);
   border-color: #777;
 }
 
 .nav-bar {
-  transition: 0.3s background;
   padding: 0 1em;
   background: #ddd;
   transition: 0.3s background;
@@ -502,6 +517,7 @@ li:hover {
   overflow-y: scroll;
   max-height: 100vh;
   transition: 0.5s box-shadow;
+  height: 2.75em;
 }
 
 .box-alert {
@@ -518,7 +534,7 @@ li:hover {
   color: white;
   display: none;
   cursor: pointer;
-  background: linear-gradient(rgba(66, 184, 255, 0.7), rgba(0, 206, 209, 0.5));
+  background: linear-gradient(rgba(66, 184, 255, 0.7), rgba(0, 206, 209, 0.7));
   -webkit-backdrop-filter: saturate(180%) blur(20px);
   backdrop-filter: saturate(180%) blur(20px);
 }
@@ -536,8 +552,6 @@ li:hover {
   display: flex;
   flex-flow: column;
   overflow: hidden;
-  transition: height 0.5s;
-  height: 0;
 }
 
 .wrapper-menu {
@@ -550,18 +564,22 @@ li:hover {
   }
 }
 
+.container-menu {
+  flex: 1;
+}
 @media (min-width: 40em) {
   .container-menu {
-    flex: 1;
     flex-flow: row;
     padding: 0;
-    max-height: 70vh;
   }
 }
 
+.line-menu {
+  background: #999999;
+}
 @media (min-width: 40em) {
   .line-menu {
-    width: 1px;
+    width: 2px;
     height: auto;
     margin: 0 2.5em;
   }
@@ -600,11 +618,11 @@ li:hover {
 }
 
 .base-main-menu {
-  margin: 0.75em auto;
+  margin: 0.5em auto;
 }
 @media (min-width: 40em) {
   .base-main-menu {
-    margin: 2.25em auto;
+    margin: 1.75em auto;
   }
 }
 
@@ -631,6 +649,11 @@ li:hover {
   margin: 0.75em 1em;
   color: #777;
   text-align: center;
+}
+
+.footer * {
+  color: #777;
+  stroke: #777;
 }
 
 .wrapper-home > .container {
@@ -688,7 +711,8 @@ li:hover {
   color: #42b8ff;
 }
 .box-checkbox:hover .checkbox {
-  border: 1px solid #42b8ff;
+  border: 2px solid;
+  border-color: #42b8ff;
 }
 
 .checkbox,
@@ -700,7 +724,8 @@ li:hover {
 .checkbox {
   margin-right: 1em;
   background: white;
-  border: 1px solid currentColor;
+  border: 2px solid;
+  border-color: #777;
   box-sizing: content-box;
   border-radius: 2px;
 }

@@ -50,12 +50,13 @@ var stickymenu = document.getElementById("sticky-menu");
 function hideMenu() {
   toogler.className = "toogler toogler-default";
   toogler.innerHTML = "Menu";
-  menu.style.height = null;
+//  menu.style.height = null;
+  stickymenu.style.height = null;
   body.style.overflow = null;
   navBar.style.transition = "0.3s background 0.5s";
   navBar.style.background = null;
   
-  stickymenu.style.boxShadow = null;
+//  stickymenu.style.boxShadow = null;
   menuOpen = 0;
   setTimeout(reset, 500);
 }
@@ -73,8 +74,11 @@ function toogleMenu() {
     body.style.overflow = "hidden";
   navBar.style.transition = "0s background";
     navBar.style.background = "#dddddd";
-    menu.style.height = document.getElementById("menu-inner-height").offsetHeight + 'px';
+ //   menu.style.height = document.getElementById("menu-inner-height").offsetHeight + 'px';
 //    stickymenu.style.boxShadow = "0 0  5vh 100vh rgba(0, 0, 0, 0.5)";
+    
+    stickymenu.style.height = "100vh";
+    
     menuOpen = 1;
   }
 }
