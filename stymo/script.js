@@ -15,7 +15,7 @@ window.onscroll = function () {
   document.getElementById("tell-current").innerHTML = currentScroll;
   if (currentScroll > 100) {
     if (previousScroll - currentScroll < 0) {
-      navBar.style.top = "-3em";
+      navBar.style.top = "-2.75em"; // NAV HEIGHT
     } else {
       navBar.style.top = "0";
     }
@@ -44,6 +44,7 @@ function hideMenu() {
   menu.style.right = null;
   menu.style.opacity = null;
   body.style.overflow = null;
+  toogler.className = "toogler"
   toogler.innerHTML = "Menu";
   menuOpen = 0;
 }
@@ -55,7 +56,7 @@ function toogleMenu() {
     menu.style.right = "0";
     menu.style.opacity = "1";
     body.style.overflow = "hidden";
-    toogler.className = "toogler";
+    toogler.className = "toogler toogler-close";
     toogler.innerHTML = "Close";
     menuOpen = 1;
   }
@@ -80,7 +81,6 @@ var orders = document.getElementById("html-orders");
 var recommend = document.getElementById("html-recommend");
 var faq = document.getElementById("html-faq");
 var contact = document.getElementById("html-contact");
-var navBarBox = document.getElementById("nav-bar-box");
 function goHome() {
   home.style.display = null;
   window.scrollTo(0, 0);
@@ -93,7 +93,7 @@ function goHome() {
   faq.style.display = null;
   contact.style.display = null;
   toogler.style.display = null;
-  navBarBox.style.justifyContent = null;
+  navBar.style.justifyContent = null;
   hideMenu();
 }
 function goToLogin() {
@@ -104,7 +104,7 @@ function goToLogin() {
     home.style.display = "none";
     login.style.display = "flex";
     toogler.style.display = "none";
-    navBarBox.style.justifyContent = "center";
+    navBar.style.justifyContent = "center";
   }
 }
 function goToAccount() {
