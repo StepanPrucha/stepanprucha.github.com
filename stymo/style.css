@@ -278,7 +278,7 @@ li:hover, li:hover * {
 }
 
 .language-menu {
-  margin: 0.375em auto 0.375em -0.5em;
+  margin: 0.75em auto 0.75em -0.5em;
 }
 .language-menu .select-language {
   padding: 0 0.75em 0 2.5em;
@@ -518,6 +518,7 @@ li:hover, li:hover * {
   max-height: 100vh;
   transition: 0.5s box-shadow;
   height: 2.75em;
+  transition: 0.5s height;
 }
 
 .box-alert {
