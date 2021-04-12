@@ -45,13 +45,12 @@ function reset() {
 var menu = document.getElementById("menu");
 var body = document.getElementById("body");
 var menuOpen = 0;
-var stickymenu = document.getElementById("sticky-menu");
 
 function hideMenu() {
   toogler.className = "toogler toogler-default";
   toogler.innerHTML = "Menu";
-//  menu.style.height = null;
-  stickymenu.style.height = null;
+  menu.style.height = null;
+//  stickymenu.style.height = null;
   body.style.overflow = null;
   navBar.style.transition = "0.3s background 0.5s";
   navBar.style.background = null;
@@ -74,10 +73,14 @@ function toogleMenu() {
     body.style.overflow = "hidden";
   navBar.style.transition = "0s background";
     navBar.style.background = "#dddddd";
- //   menu.style.height = document.getElementById("menu-inner-height").offsetHeight + 'px';
+    
+    menu.scrollTo(0, 0);
+    menu.style.height = "calc(100vh - 2.75em)";
+    
+    //    menu.style.height = document.getElementById("menu-inner-height").offsetHeight + 'px';
 //    stickymenu.style.boxShadow = "0 0  5vh 100vh rgba(0, 0, 0, 0.5)";
     
-    stickymenu.style.height = "100vh";
+//    stickymenu.style.height = "100vh";
     
     menuOpen = 1;
   }
@@ -168,6 +171,9 @@ function logIn() {
   userName.style.display = "block";
   loginLink.innerHTML = "Log out:";
   loggedIn = 1;
+  
+  toogler.style.display = null;
+  navBar.style.justifyContent = null;
   toogleMenu();
   
   /* Alert Message*/

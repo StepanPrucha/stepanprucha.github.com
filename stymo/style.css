@@ -494,6 +494,8 @@ li:hover, li:hover * {
 }
 
 .nav-bar {
+  position: sticky;
+  top: 0;
   padding: 0 1em;
   background: #ddd;
   transition: 0.3s background;
@@ -550,17 +552,22 @@ li:hover, li:hover * {
 } */
 .menu {
   background: linear-gradient(135deg, #dddddd, #bfbfbf);
-  display: flex;
   flex-flow: column;
-  overflow: hidden;
+  height: 0;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  position: sticky;
+  top: 2.75em;
+  z-index: 10;
+  transition: 0.5s height;
 }
 
 .wrapper-menu {
-  padding: 0 0 4em;
+  padding: 0 0 5.5em;
 }
 @media (min-width: 40em) {
   .wrapper-menu {
-    padding: 1.5em 0;
+    padding: 1.5em 0 3em;
     min-height: calc(100vh - 2.75em);
   }
 }
