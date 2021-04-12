@@ -440,6 +440,7 @@ li:hover, li:hover * {
 }
 
 .distance-from-top > .line {
+  height: 1px !important;
   width: 0.5em;
   margin: 0 0 0.25em;
 }
@@ -463,16 +464,16 @@ li:hover, li:hover * {
   letter-spacing: 0.025em;
   line-height: 1.75em;
   margin: auto 0;
-  padding: 0 0.75em;
-  border-radius: 2px;
+  padding: 0 1em;
+  border-radius: 1em;
   cursor: pointer;
 }
 
 .toogler-default {
   color: white;
   border: 2px solid;
-  background: linear-gradient(#777777, #333333);
-  border-color: #777;
+  background: linear-gradient(#42b8ff, darkturquoise);
+  border-color: #42b8ff;
 }
 
 .toogler-highlighted {
