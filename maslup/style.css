@@ -67,12 +67,12 @@ p {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));
   -webkit-backdrop-filter: saturate(125%) blur(5px);
   backdrop-filter: saturate(125%) blur(5px);
+  padding-bottom: 20vh;
 }
 
 #container-1 .base {
   align-items: center;
   text-align: center;
-  padding-bottom: 15vh;
 }
 
 .logo {
