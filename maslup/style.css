@@ -73,6 +73,7 @@ p {
 #container-1 .base {
   align-items: center;
   text-align: center;
+  padding-bottom: 15vh;
 }
 
 .logo {
