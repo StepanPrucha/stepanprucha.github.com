@@ -9,14 +9,14 @@ html {
 }
 
 body {
-  background: SkyBlue;
+  background: DarkSeaGreen;
 }
 
 @keyframes colors {
-  0% {background: SkyBlue;}
+  0% {background: DarkSeaGreen;}
   33% {background: Khaki;}
-  66% {background: DarkSeaGreen;}
-  100% {background: SkyBlue;}
+  66% {background: SkyBlue;}
+  100% {background: DarkSeaGreen;}
 }
 
 .bg-animation {
