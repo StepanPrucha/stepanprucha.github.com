@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+html, body, div {
+  height: 100%;
+}
+
 html {
   color: #333;
   font-family: sans-serif;
@@ -34,8 +38,6 @@ div {
   display: flex;
   width: 100vw;
   overflow: hidden;
-  height: -webkit-fill-available;
-  height: 100vh;
   cursor: pointer;
 }
 
