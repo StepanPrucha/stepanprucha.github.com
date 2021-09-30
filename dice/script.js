@@ -1,18 +1,13 @@
-var body = document.getElementById("body");
-
 function myFunction() {
-  body.className = "bg-animation";
+  rollDice();
   setTimeout(rollDice, 200);
   setTimeout(rollDice, 400);
   setTimeout(rollDice, 600);
-  setTimeout(rollDice, 800);
-  setTimeout(rollDice, 1100);
-  setTimeout(rollDice, 1500);
-  setTimeout(animationReset, 2000);
-}
-
-function animationReset() {
-  body.className = "";
+  setTimeout(rollDice, 900);
+  setTimeout(rollDice, 1300);
+  changeBgColor();
+  setTimeout(changeBgColor, 650);
+  setTimeout(changeBgColor, 1300);
 }
 
 var dice1 = document.getElementById("dice-1");
@@ -22,15 +17,15 @@ var dice4 = document.getElementById("dice-4");
 var dice5 = document.getElementById("dice-5");
 var dice6 = document.getElementById("dice-6");
 
-var actualNumber = 1;
+var currentNumber = 1;
 
 function rollDice() {
-//  var previousNumber = document.getElementById("demo").innerText;
+  //  var previousNumber = document.getElementById("demo").innerText;
   var randomNumber = Math.floor(Math.random() * 6 + 1);
-  if (actualNumber == randomNumber) {
+  if (currentNumber == randomNumber) {
     rollDice();
   } else {
-    actualNumber = randomNumber;
+    currentNumber = randomNumber;
     hideAll();
     if (randomNumber == 1) {
       dice1.style.display = "block";
@@ -60,4 +55,26 @@ function hideAll() {
   dice4.style.display = "none";
   dice5.style.display = "none";
   dice6.style.display = "none";
+}
+
+var body = document.getElementById("body");
+var currentBgNumber = 1;
+
+function changeBgColor() {
+  var randomBgNumber = Math.floor(Math.random() * 3 + 1);
+  if (randomBgNumber == currentBgNumber) {
+    changeBgColor();
+  }
+  else {
+    currentBgNumber = randomBgNumber;
+    if (randomBgNumber == 1) {
+      body.style.background = "DarkSeaGreen";
+    }
+    if (randomBgNumber == 2) {
+      body.style.background = "LightSalmon";
+    }
+    if (randomBgNumber == 3) {
+      body.style.background = "SkyBlue";
+    }
+  }
 }
