@@ -20,7 +20,6 @@ var dice6 = document.getElementById("dice-6");
 var currentNumber = 1;
 
 function rollDice() {
-  //  var previousNumber = document.getElementById("demo").innerText;
   var randomNumber = Math.floor(Math.random() * 6 + 1);
   if (currentNumber == randomNumber) {
     rollDice();
