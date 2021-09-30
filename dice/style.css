@@ -26,8 +26,8 @@ div {
 .dice {
   margin: auto;
   width: auto;
-  height: 66vh;
-  max-height: 66vw;
+  height: 50vh;
+  max-height: 50vw;
 }
 
 rect {
