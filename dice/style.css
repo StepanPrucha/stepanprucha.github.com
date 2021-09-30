@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  color: #333;
+  font-family: sans-serif;
+}
+
+body {
+  background: SkyBlue;
+}
+
+@keyframes colors {
+  0% {background: SkyBlue;}
+  33% {background: Khaki;}
+  66% {background: DarkSeaGreen;}
+  100% {background: SkyBlue;}
+}
+
+.bg-animation {
+  animation: colors 2s;
+}
+
+/** div {
+  text-align: center;
+  font-size: 80vh;
+  line-height: 100vh;
+  cursor: pointer;
+} **/
+
+div {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  cursor: pointer;
+}
+
+.dice {
+  margin: auto;
+  width: auto;
+  height: 66vh;
+  max-height: 66vw;
+}
+
+#dice-2 {
+  display: none;
+}
+
+#dice-3 {
+  display: none;
+}
+
+#dice-4 {
+  display: none;
+}
+
+#dice-5 {
+  display: none;
+}
+
+#dice-6 {
+  display: none;
+}
