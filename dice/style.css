@@ -36,6 +36,10 @@ div {
   overflow: hidden;
   height: 100vh;
   height: -webkit-fill-available;
+  height: -moz-fill-available;
+  height: -ms-fill-available;
+  height: -o-fill-available;
+  height: fill-available;
   cursor: pointer;
 }
 
