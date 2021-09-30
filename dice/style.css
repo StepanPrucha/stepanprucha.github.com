@@ -17,13 +17,6 @@ body {
   transition: background 0.5s;
 }
 
-/** div {
-  text-align: center;
-  font-size: 80vh;
-  line-height: 100vh;
-  cursor: pointer;
-} **/
-
 div {
   display: flex;
   overflow: hidden;
