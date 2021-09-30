@@ -14,8 +14,8 @@ body {
 
 @keyframes colors {
   0% {background: DarkSeaGreen;}
-  33% {background: Khaki;}
-  66% {background: SkyBlue;}
+  33% {background: SkyBlue;}
+  66% {background: Khaki;}
   100% {background: DarkSeaGreen;}
 }
 
