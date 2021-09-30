@@ -5,6 +5,7 @@
 
 html, body, div {
   height: 100%;
+  width: 100%;
 }
 
 html {
@@ -36,7 +37,6 @@ body {
 
 div {
   display: flex;
-  width: 100vw;
   overflow: hidden;
   cursor: pointer;
 }
