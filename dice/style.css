@@ -9,23 +9,12 @@ html, body, div {
 }
 
 html {
-  color: #333;
   font-family: sans-serif;
 }
 
 body {
-  background: DarkSeaGreen;
-}
-
-@keyframes colors {
-  0% {background: DarkSeaGreen;}
-  33% {background: SkyBlue;}
-  66% {background: Khaki;}
-  100% {background: DarkSeaGreen;}
-}
-
-.bg-animation {
-  animation: colors 2s;
+  background: SkyBlue;
+  transition: background 0.5s;
 }
 
 /** div {
@@ -46,6 +35,14 @@ div {
   width: auto;
   height: 66vh;
   max-height: 66vw;
+}
+
+rect {
+  fill: #fff;
+}
+
+circle {
+  fill: #333;
 }
 
 #dice-2 {
