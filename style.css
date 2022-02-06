@@ -61,11 +61,15 @@ a {
   color: currentColor;
 }
 
+a:link {
+  color: #333333;
+}
+
 a:hover {
   color: #2C79FF;
 }
 
-a:link, a:active, a:visited {
+a:active, a:visited {
   color: #333333;
 }
 
