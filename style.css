@@ -98,6 +98,10 @@ a:hover {
   border-radius: 100%;
 }
 
+.profile-pic:hover {
+  opacity: 90%;
+}
+
 .header .text-field {
   margin-bottom: 1rem !important;
 }
