@@ -9,6 +9,9 @@ html {
   color: #333;
   font-size: 1rem;
   font-family: Montserrat, sans-serif;
+  background: linear-gradient(135deg, #d2dce6, #6e7882);
+  background-size: 100vw 100vh;
+  background-attachment: fixed;
 }
 
 @media (min-width: 1600px) {
@@ -20,12 +23,6 @@ html {
   html {
     font-size: 80%;
   }
-}
-body {
-  background: linear-gradient(135deg, #d2dce6, #6e7882);
-  background-size: 120vw 120vh;
-  background-position: center;
-  background-attachment: fixed;
 }
 
 p {
