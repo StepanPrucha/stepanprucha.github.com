@@ -1,117 +1,171 @@
-html, body {
-  background-color: #000000;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap");
+* {
   margin: 0;
   padding: 0;
-  font-size: 1.125em;
+  line-height: 125%;
 }
 
-.sp, .w, .pg, .st {
-  background-color: #bbbbbb;
+html {
+  color: #333;
+  font-size: 1rem;
+  font-family: Montserrat, sans-serif;
 }
 
-html, .dark, a:link, a:visited, a:active {
-  color: #333333;
+@media (min-width: 1600px) {
+  html {
+    font-size: 125%;
+  }
+}
+@media (max-width: 320px) {
+  html {
+    font-size: 80%;
+  }
+}
+body {
+  background: linear-gradient(135deg, #d2dce6, #6e7882);
+  background-size: 120vw 120vh;
+  background-position: center;
+  background-attachment: fixed;
 }
 
-.light, .light a:link, .light a:visited, .light a:active {
-  color: #eeeeee;
+p {
+  margin-top: 5vh;
 }
 
-a:hover, .light a:hover {
-  color: #888888;
+h1 {
+  font-weight: 600;
+  font-size: 1.75rem;
 }
 
-.w, .sp {
-  display: flex;
-}
-
-.w {
-  min-height: 66.6667vh;
-  flex-wrap: wrap;
-  padding: 5.5556vh 0;
-}
-
-.b {
-  min-height: 88.8889vh;
-}
-
-.t, .p {
-  margin: auto 0;
-  width: calc(100vw - 12.5vw);
-  padding: 5.5556vh 6.25vw; 
-}
-
-.p {
-  padding: 0 6.25vw;
-}
-
-.sp {
- min-height: calc(11.1112vh + 1.333em * 1.25);
-}
-
-h1, h2, h3, h4, p, li {
-  margin: 1em 0;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 400;
-  line-height: 1.25em;
-  letter-spacing:0.015625em;
-}
-
-h1, h2 {
-  font-size: 2.2222em;
-  font-weight: 300;
+h2 {
+  font-weight: 600;
+  font-size: 1.75rem;
 }
 
 h3 {
-  font-size: 1.6666em;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 h4 {
-  font-size: 1.3333em;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 strong {
-  font-weight: 600;
+  font-weight: 500;
 }
 
 a {
-  text-decoration: underline;
+  font-weight: 600;
+  color: currentColor;
 }
 
-.n {
+a:hover {
+  color: #ffcc44;
+}
+
+.space {
+  height: 10vh;
+}
+
+.text-field {
+  width: 90vw;
+  max-width: 30rem;
+  margin: auto;
+  padding: 0 5vw;
+}
+
+.header {
+  min-height: calc(60vh);
+  scroll-snap-align: top;
+  display: flex;
+  flex-flow: column;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.box {
+  margin-right: 1rem;
+}
+
+.profile-pic {
+  width: 6rem;
+  border-radius: 100%;
+}
+
+.header .text-field {
+  margin-bottom: 1rem !important;
+}
+
+.header .text-field:last-child {
+  margin-bottom: 0 !important;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.menu li {
+  line-height: 3.5rem;
+  border-bottom: solid 1px rgba(255, 255, 255, 0.15);
+}
+
+.menu > a:last-child > li {
+  border-bottom: none;
+}
+
+.menu-2 {
+  display: flex;
+  align-items: center;
+}
+
+.twitter {
+  margin-right: 2rem;
+  height: 1.5rem;
+}
+
+.youtube {
+  height: 1.25rem;
+}
+
+.icon {
+  fill: #333;
+}
+
+.icon:hover {
+  fill: #ffcc44;
+}
+
+.banner-big {
+  min-height: calc(80vh);
+  display: flex;
+}
+
+.banner-big .text-field {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.banner-big .text-field h2 {
+  color: white;
+}
+
+.cardano-logo {
+  width: 5rem;
+  fill: white;
+}
+
+hr {
+  width: 90vw;
+  margin: auto;
+  border: 0;
+  height: 1px;
+  background: currentColor;
+}
+
+.logo {
   text-decoration: none;
-}
-
-.st {
-  display: grid;
-  position: sticky;
-  -webkit-position: sticky;
-  top: 0;
-}
-
-li {
-  padding: 0 0 0 1em;
-}
-
-@media only screen and (min-width: calc(28em + 12.5vw)) {
-  
-  .w {
-    flex-wrap: nowrap;
-  }
-  
-  .t {
-    width: calc(50vw - 12.5vw);
-  }
-  
-  .t2 {
-    margin: auto 0 auto auto;
-  }
-  
-  .p {
-    max-width: 28em;
-    margin: auto;
-  }
-  
 }
