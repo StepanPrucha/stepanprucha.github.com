@@ -152,11 +152,12 @@ ul {
   align-items: center;
   justify-content: space-between;
 }
-.banner-big .text-field h2 {
+.banner-big .text-field * {
   color: white;
 }
 
 .cardano-logo {
+  margin-right: 1rem;
   width: 5rem;
   fill: white;
 }
