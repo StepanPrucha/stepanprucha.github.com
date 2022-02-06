@@ -97,56 +97,45 @@ a:hover {
   width: 5rem;
   border-radius: 100%;
 }
-
 .profile-pic:hover {
   opacity: 90%;
 }
-
 .header .text-field {
   margin-bottom: 1rem !important;
 }
-
 .header .text-field:last-child {
   margin-bottom: 0 !important;
 }
-
 ul {
   list-style-type: none;
 }
-
 .menu li {
   line-height: 3.5rem;
   border-bottom: solid 1px rgba(255, 255, 255, 0.15);
 }
-
 .menu > a:last-child > li {
   border-bottom: none;
 }
-
 .menu-2 {
   display: flex;
   align-items: center;
 }
 
-.twitter {
+.icon {
+  fill: #333;
   margin-right: 2rem;
+}
+.icon:hover {
+  fill: #2C79FF;
+}
+.twitter {
   height: 1.5rem;
 }
-
 .youtube {
   height: 1.25rem;
 }
-
 .gettr {
   height: 1.5rem;
-}
-
-.icon {
-  fill: #333;
-}
-
-.icon:hover {
-  fill: #2C79FF;
 }
 
 .banner-big {
