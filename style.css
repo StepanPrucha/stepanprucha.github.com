@@ -65,6 +65,10 @@ a:hover {
   color: #2C79FF;
 }
 
+a:link, a:active, a:visited {
+  color: #333333;
+}
+
 .space {
   height: 10vh;
 }
