@@ -93,15 +93,11 @@ a:active {
 
 .top {
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 
-.box {
-  margin-right: 1rem;
-}
-
 .profile-pic {
+  margin-right: 1rem;
   width: 5rem;
   border-radius: 100%;
 }
