@@ -107,9 +107,6 @@ a:active {
 .header .text-field {
   margin-bottom: 1rem !important;
 }
-.header .text-field:last-child {
-  margin-bottom: 0 !important;
-}
 ul {
   list-style-type: none;
 }
