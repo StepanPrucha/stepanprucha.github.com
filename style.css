@@ -9,10 +9,12 @@ html {
   color: #333;
   font-size: 1rem;
   font-family: Montserrat, sans-serif;
+  background: rgb(197,203,211);
 }
 
-html, body {
-  background: #B8BFC8;
+body {
+  background: rgb(197,203,211);
+  background: linear-gradient(90deg, rgba(197,203,211,1) 0%, rgba(182,190,200,1) 50%, rgba(140,146,153,1) 100%);
 }
 
 @media (min-width: 1600px) {
