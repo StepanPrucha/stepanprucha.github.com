@@ -9,12 +9,17 @@ html {
   color: #333;
   font-size: 1rem;
   font-family: Montserrat, sans-serif;
-  background: rgb(197,203,211);
+  background: rgb(235, 235, 235);
 }
 
 body {
-  background: rgb(197,203,211);
-  background: linear-gradient(90deg, rgba(197,203,211,1) 0%, rgba(182,190,200,1) 50%, rgba(140,146,153,1) 100%);
+  background: rgb(235, 235, 235);
+  background: linear-gradient(
+    120deg,
+    rgba(235, 235, 235, 1) 0%,
+    rgba(199, 205, 213, 1) 67%,
+    rgba(165, 167, 171, 1) 100%
+  );
 }
 
 @media (min-width: 1600px) {
