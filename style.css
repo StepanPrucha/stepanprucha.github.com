@@ -13,8 +13,13 @@ html {
 }
 
 body {
-  background: rgb(235,235,235);
-  background: linear-gradient(100deg, rgba(235,235,235,1) 0%, rgba(199,205,213,1) 67%, rgba(161,163,167,1) 100%);
+  background: rgb(235, 235, 235);
+  background: linear-gradient(
+    100deg,
+    rgba(235, 235, 235, 1) 0%,
+    rgba(199, 205, 213, 1) 67%,
+    rgba(161, 163, 167, 1) 100%
+  );
 }
 
 @media (min-width: 1600px) {
@@ -59,12 +64,13 @@ a {
   color: currentColor;
 }
 
-a:link, a:visited {
+a:link,
+a:visited {
   color: #333333;
 }
 
 a:hover {
-  color: #2C79FF;
+  color: #2c79ff;
 }
 
 a:active {
@@ -110,7 +116,7 @@ ul {
 }
 .menu li {
   line-height: 3.5rem;
-  border-bottom: solid 1px rgba(255, 255, 255, 0.25);
+  border-bottom: solid 1px rgba(255, 255, 255, 0.4);
 }
 .menu > a:last-child > li {
   border-bottom: none;
@@ -125,7 +131,7 @@ ul {
   margin-right: 2rem;
 }
 .icon:hover {
-  fill: #2C79FF;
+  fill: #2c79ff;
 }
 .twitter {
   height: 1.5rem;
@@ -137,9 +143,21 @@ ul {
   height: 1.375rem;
 }
 
+@keyframes wave {
+  0% {  background-position: 30% 30%;}
+  50% {  background-position: 70% 70%;}
+  100% {  background-position: 30% 30%;}
+}
+
 .banner-big {
   min-height: calc(80vh);
   display: flex;
+  background-image:
+    //linear-gradient(180deg,rgba(0,0,0,0.0),rgba(0,0,0,0.0)),
+    url("https://i.ibb.co/fNTNMqf/stepan-prucha-cardano.jpg");
+  background-position: 40% 40%;
+  background-size: cover;
+  animation: 5s wave infinite;
 }
 
 .banner-big .text-field {
@@ -168,3 +186,4 @@ hr {
 .logo {
   text-decoration: none;
 }
+
