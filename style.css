@@ -13,13 +13,8 @@ html {
 }
 
 body {
-  background: rgb(235, 235, 235);
-  background: linear-gradient(
-    120deg,
-    rgba(235, 235, 235, 1) 0%,
-    rgba(199, 205, 213, 1) 67%,
-    rgba(165, 167, 171, 1) 100%
-  );
+  background: rgb(235,235,235);
+  background: linear-gradient(120deg, rgba(235,235,235,1) 0%, rgba(199,205,213,1) 67%, rgba(161,163,167,1) 100%);
 }
 
 @media (min-width: 1600px) {
