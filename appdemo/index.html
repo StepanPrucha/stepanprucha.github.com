@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - MO Software</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+  <div class="login-pg" id="login-pg">
+    <div class="logo-box" onclick="changeColor()">
+      <div class="logo-symbol">
+        <i id="logo-icon" class="fa fa-bar-chart logo-icon"></i>
+      </div>
+      <div class="logo-type">
+        Logo
+      </div>
+    </div>
+    <div class="login-box">
+      <div class="login-box-title box-title">Administration login</div>
+      <div class="login-box-description">Login via your email and password. </div>
+      <form class="login-form">
+        <div class="form-field">
+          <input id="email" class="input-text js-input" type="email" required>
+          <label class="label" for="email">E-mail</label>
+        </div>
+        <div class="form-field">
+          <input id="password" class="input-text js-input" type="password" required>
+          <label class="label" for="password">Password</label>
+        </div>
+        <div class="form-field">
+          <input class="submit-btn" type="submit" value="Login" onclick="enter()">
+        </div>
+      </form>
+      <a href="#">Forgotten password?</a>
+      <a href="#">Register new account</a>
+    </div>
+  </div>
+
+  <div class="app" id="app">
+
+    <div class="navbar">
+      <div class="logo-box logo-box-navbar" onclick="changeColor()">
+        <div class="logo-symbol">
+          <i id="logo-icon-2" class="fa fa-bar-chart logo-icon"></i>
+        </div>
+        <div class="logo-type">
+          Logo
+        </div>
+      </div>
+      <ul class="main-menu">
+          <li onclick="goToOverview()" id="overview-link">Overview</li>
+          <li class="active" onclick="goToAministration()" id="administration-link">Administration</li>
+          <li onclick="goToLogistics()" id="logistics-link">Logistics</li>
+          <li onclick="goToPermissions()" id="permissions-link">Permissions</li>
+        </ul>
+      <ul class="user-menu">
+        <li><i class="fa fa-user-circle-o" aria-hidden="true"></i><div>Stepan Prucha</div></li>
+    <li class="language-select"><select id="language" name="Language">
+          <option value="English">English</option>
+          <option value="Czech">Czech</option>
+        </select>
+        <i class="fa fa-angle-down" aria-hidden="true"></i></li></li>
+  <li onclick="leave()"><i class="fa fa-sign-out" aria-hidden="true"></i></li>
+      </ul>
+    </div>
+
+    <div class="content-box overview-pg">
+      
+      <div class="sidebar" id="sidebar">
+        <div class="sidebar-title-box" onclick="toogleSidebar()"><div class="sidebar-title">Administration</div><i id="toogle-sidebar" class="fa fa-angle-double-left" aria-hidden="true"></i></div>
+        <ul>
+          <li class="active" onclick="goToUsermanagement()" id="usermanagement-link"><div>User management</div><i class="fa fa-address-book-o" aria-hidden="true"></i></li>
+            <li onclick="goToRolespermissions()" id="rolespermissions-link"><div>Roles & Permissions</div><i class="fa fa-users" aria-hidden="true"></i></li>
+            <li onclick="goToSettings()" id="settings-link"><div>Settings</div><i class="fa fa-sliders" aria-hidden="true"></i></li>
+            <li onclick="goToLoremipsum()" id="loremipsum-link"><div>Lorem ipsum</div><i class="fa fa-sitemap" aria-hidden="true"></i></li>
+        </ul>
+      </div>
+      
+      <div class="content"></div>
+    </div>
+  </div>
+
+</body>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
