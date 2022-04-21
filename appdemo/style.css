@@ -233,6 +233,7 @@ form .input-text:focus + .label, form .input-text.not-empty + .label {
 }
 form .input-text:disabled {
   color: var(--darkgrey-color);
+  border-color: var(--light-color);
 }
 form .label {
   position: absolute;
