@@ -9,19 +9,20 @@
 
 <body>
 
+  <!-- Login Page -->
   <div class="login-pg" id="login-pg">
     <div class="logo-box" onclick="changeColor()">
       <div class="logo-symbol">
-        <i id="logo-icon" class="fa fa-bar-chart logo-icon"></i>
+        <i class="fa fa-bar-chart logo-icon"></i>
       </div>
-      <div class="logo-type">
+      <div class="logo-text">
         Logo
       </div>
     </div>
-    <div class="login-box">
+    <div class="box">
       <div class="login-box-title box-title">Administration login</div>
-      <div class="login-box-description">Login via your email and password. </div>
-      <form class="login-form">
+      <div class="box-text">Click login without providing login details. This is demo site.</div>
+      <form class="form login-form">
         <div class="form-field">
           <input id="email" class="input-text js-input" type="email" required>
           <label class="label" for="email">E-mail</label>
@@ -31,7 +32,7 @@
           <label class="label" for="password">Password</label>
         </div>
         <div class="form-field">
-          <input class="submit-btn" type="submit" value="Login" onclick="enter()">
+          <input class="button submit-btn" type="submit" value="Login" onclick="enter()">
         </div>
       </form>
       <a href="#">Forgotten password?</a>
@@ -39,53 +40,220 @@
     </div>
   </div>
 
+  <!-- Application Interface -->
   <div class="app" id="app">
 
+    <!-- Navbar -->
     <div class="navbar">
       <div class="logo-box logo-box-navbar" onclick="changeColor()">
         <div class="logo-symbol">
-          <i id="logo-icon-2" class="fa fa-bar-chart logo-icon"></i>
+          <i class="fa fa-bar-chart logo-icon"></i>
         </div>
-        <div class="logo-type">
+        <div class="logo-text">
           Logo
         </div>
       </div>
       <ul class="main-menu">
-          <li onclick="goToOverview()" id="overview-link">Overview</li>
-          <li class="active" onclick="goToAministration()" id="administration-link">Administration</li>
-          <li onclick="goToLogistics()" id="logistics-link">Logistics</li>
-          <li onclick="goToPermissions()" id="permissions-link">Permissions</li>
-        </ul>
+        <li class="active" onclick="goToOverview()" id="overview-link">Overview</li>
+        <li onclick="goToAministration()" id="administration-link">Administration</li>
+        <li onclick="goToLogistics()" id="logistics-link">Logistics</li>
+        <li onclick="goToPermissions()" id="permissions-link">Permissions</li>
+      </ul>
       <ul class="user-menu">
-        <li><i class="fa fa-user-circle-o" aria-hidden="true"></i><div>Stepan Prucha</div></li>
-    <li class="language-select"><select id="language" name="Language">
-          <option value="English">English</option>
-          <option value="Czech">Czech</option>
-        </select>
-        <i class="fa fa-angle-down" aria-hidden="true"></i></li></li>
-  <li onclick="leave()"><i class="fa fa-sign-out" aria-hidden="true"></i></li>
+        <li onclick="goToUserSettings()"><i class="fa fa-user-circle-o" aria-hidden="true"></i>
+          <div>Stepan Prucha</div>
+        </li>
+        <li class="language-select"><select id="language" name="Language">
+            <option value="English">English</option>
+            <option value="Czech">Czech</option>
+          </select>
+          <i class="fa fa-angle-down" aria-hidden="true"></i>
+        </li>
+        <li onclick="leave()"><i class="fa fa-sign-out" aria-hidden="true"></i></li>
       </ul>
     </div>
 
-    <div class="content-box overview-pg">
-      
-      <div class="sidebar" id="sidebar">
-        <div class="sidebar-title-box" onclick="toogleSidebar()"><div class="sidebar-title">Administration</div><i id="toogle-sidebar" class="fa fa-angle-double-left" aria-hidden="true"></i></div>
+    <!-- Overview Page -->
+    <div class="content-box" id="overview-pg">
+      <!-- Overview Tab -->
+      <div class="content-tab" id="overview-tab">
+        <div class="row">
+          <div class="box">
+            <div class="box-title">Welcome</div>
+            <div class="box-text">Manage all personel in one place. Following page is a demo with sidebar tab manager.</div>
+            <div class="button box-button" onclick="goToAministration()">Go to admin</div>
+          </div>
+          <div class="box">
+            <div class="box-title">Change color theme</div>
+            <div class="box-text">Imagine the whole site in diferent color theme. You can also change color theme by clicking on site logo on the top.</div>
+            <div class="button secondary-button box-button" onclick="changeColor()">Change theme</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="box">
+            <div class="box-title">Statistics</div>
+            <div class="box-text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+            <div class="box-text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+            <div class="box-text">Sagittis purus sit amet volutpat consequat. Egestas fringilla phasellus faucibus scelerisque eleifend donec pretium. Enim tortor at auctor urna nunc id cursus. Neque sodales ut etiam sit. Mattis vulputate enim nulla aliquet porttitor lacus. Maecenas volutpat blandit aliquam etiam erat velit scelerisque. Cras ornare arcu dui vivamus arcu felis. Enim nulla aliquet porttitor lacus luctus accumsan tortor. Faucibus et molestie ac feugiat.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Administration Page -->
+    <div class="content-box" id="administration-pg">
+      <!-- Administration Page Sidebar -->
+      <div class="content-sidebar" id="sidebar">
+        <div class="sidebar-title-box" onclick="toogleSidebar()">
+          <div class="sidebar-title">Administration</div><i id="toogle-sidebar" class="fa fa-angle-double-left" aria-hidden="true"></i>
+        </div>
         <ul>
-          <li class="active" onclick="goToUsermanagement()" id="usermanagement-link"><div>User management</div><i class="fa fa-address-book-o" aria-hidden="true"></i></li>
-            <li onclick="goToRolespermissions()" id="rolespermissions-link"><div>Roles & Permissions</div><i class="fa fa-users" aria-hidden="true"></i></li>
-            <li onclick="goToSettings()" id="settings-link"><div>Settings</div><i class="fa fa-sliders" aria-hidden="true"></i></li>
-            <li onclick="goToLoremipsum()" id="loremipsum-link"><div>Lorem ipsum</div><i class="fa fa-sitemap" aria-hidden="true"></i></li>
+          <li class="active" onclick="goToUsermanagement()" id="usermanagement-link">
+            <div>User management</div><i class="fa fa-address-book-o" aria-hidden="true"></i>
+          </li>
+          <li onclick="goToRolespermissions()" id="rolespermissions-link">
+            <div>Roles & Permissions</div><i class="fa fa-users" aria-hidden="true"></i>
+          </li>
+          <li onclick="goToSettings()" id="settings-link">
+            <div>Settings</div><i class="fa fa-sliders" aria-hidden="true"></i>
+          </li>
+          <li onclick="goToLoremipsum()" id="loremipsum-link">
+            <div>Lorem ipsum</div><i class="fa fa-sitemap" aria-hidden="true"></i>
+          </li>
         </ul>
       </div>
-      
-      <div class="content"></div>
+      <!-- User management Tab -->
+      <div class="content-tab" id="usermanagement-tab">
+        <div class="row">
+          <div class="invisible-box">
+            <h1>User management</h1>
+            <div class="box-text">Manage all personel in one place. This page is a demo with sidebar tab manager.</div>
+          </div>
+          <div class="switch">
+            <div class="switch-button active" id="switch-one" onclick="switchOne()">
+              <i class="fa fa-th-list" aria-hidden="true"></i>
+            </div>
+            <div class="switch-button" id="switch-two" onclick="switchTwo()">
+              <i class="fa fa-th-large" aria-hidden="true"></i>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="box">
+            <div class="box-title">Title 1</div>
+            <div class="box-text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+            <div class="box-text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+            <div class="box-text">Sagittis purus sit amet volutpat consequat. Egestas fringilla phasellus faucibus scelerisque eleifend donec pretium. Enim tortor at auctor urna nunc id cursus. Neque sodales ut etiam sit. Mattis vulputate enim nulla aliquet porttitor lacus. Maecenas volutpat blandit aliquam etiam erat velit scelerisque. Cras ornare arcu dui vivamus arcu felis. Enim nulla aliquet porttitor lacus luctus accumsan tortor. Faucibus et molestie ac feugiat.</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="box">
+            <div class="box-title">Title 2</div>
+            <div class="box-text">Lorem ipsum dolor sit admet.</div>
+            <div class="button box-button button-small">Sit admet</div>
+          </div>
+          <div class="box">
+            <div class="box-title">Title 3</div>
+            <div class="box-text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </div>
+          </div>
+        </div>
+      </div>
+      <!-- Roles & Permissions Tab -->
+      <div class="content-tab" id="rolespermissions-tab">
+        <div class="row">
+          <div class="invisible-box">
+            <h1>Roles & Permissions</h1>
+            <div class="box-text">Excepteur sint occaecat cupidatat non proident.</div>
+          </div>
+        </div>
+      </div>
+      <!-- Settings Tab -->
+      <div class="content-tab" id="settings-tab">
+        <div class="row">
+          <div class="invisible-box">
+            <h1>Settings</h1>
+            <div class="box-text">Sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+          </div>
+        </div>
+      </div>
+      <!-- Lorem ipsum Tab -->
+      <div class="content-tab" id="loremipsum-tab">
+        <div class="row">
+          <div class="invisible-box">
+            <h1>Lorem ipsum</h1>
+            <div class="box-text">Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </div>
+          </div>
+        </div>
+      </div>
     </div>
+
+    <!-- User Settings Page -->
+    <div class="content-box" id="usersettings-pg">
+      <!-- Overview Tab -->
+      <div class="content-tab" id="usersettings-tab">
+        <div class="row">
+          <div class="invisible-box"> 
+            <h1>User settings</h1>
+            <div class="box-text">Manage your account.</div>
+          </div>
+          <div class="button button-small secondary-button" onclick="leave()">Log out</div>
+        </div>
+        <!-- <div class="row">
+          <div class="box">
+            <div class="box-title">Basic info</div>
+            <div class="box-text">Last login</div>
+            <div class="box-text">Account created</div>
+          </div>
+        </div> -->
+        <div class="row">
+          <div class="box">
+            <div class="box-title">User details</div>
+            <div class="box-text">Your username cannot be changed.</div>
+            <form class="form">
+              <div class="form-field">
+                <input id="username" class="input-text js-input not-empty" type="text" value="pruchas" disabled>
+                <label class="label" for="username">Username</label>
+              </div>
+              <div class="form-field">
+                <input id="fullname" class="input-text js-input not-empty" type="text" value="Stepan Prucha" required>
+                <label class="label" for="fullname">Full name</label>
+              </div>
+              <div class="form-field">
+                <input id="usemail" class="input-text js-input not-empty" type="email" value="pruchas@gmail.com" required>
+                <label class="label" for="usemail">Email</label>
+              </div>
+              <div class="form-field">
+                <input class="button submit-btn secondary-button" type="submit" value="Save">
+              </div>
+            </form>
+          </div>
+          <div class="box">
+            <div class="box-title">Change password</div>
+            <div class="box-text">Chose strong password.</div>
+            <form class="form">
+              <div class="form-field">
+                <input id="old-password" class="input-text js-input" type="password" required>
+                <label class="label" for="old-password">Old password</label>
+              </div>
+              <div class="form-field">
+                <input id="new-password" class="input-text js-input" type="password" required>
+                <label class="label" for="new-password">New password</label>
+              </div>
+              <div class="form-field">
+                <input id="repeat-password" class="input-text js-input" type="password" required>
+                <label class="label" for="repeat-password">Repeat password</label>
+              </div>
+              <div class="form-field">
+                <input class="button submit-btn" type="submit" value="Change">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
-
-</body>
-<!-- partial -->
+  
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./script.js"></script>
-
 </body>
 </html>
