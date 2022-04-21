@@ -1,7 +1,4 @@
-// Basic
-
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
-
 :root {
   --main-color: #3fa4c9;
   --body-color: #d5ebf3;
@@ -27,15 +24,13 @@ body {
   color: var(--regular-color);
 }
 
-// Elements
-
 a {
   line-height: 1.375rem;
   color: var(--main-color);
   text-decoration: none;
-  &:hover {
-    opacity: 0.7;
-  }
+}
+a:hover {
+  opacity: 0.7;
 }
 
 h1 {
@@ -59,9 +54,9 @@ h1 {
   font-weight: 400;
   border: none;
   cursor: pointer;
-  &:hover {
-    opacity: 0.8;
-  }
+}
+.button:hover {
+  opacity: 0.8;
 }
 
 .button-small {
@@ -89,9 +84,9 @@ h1 {
 .box-text {
   color: var(--mediumgrey-color);
   margin-bottom: 0.625rem;
-  &:last-child {
-    margin-bottom: 0;
-  }
+}
+.box-text:last-child {
+  margin-bottom: 0;
 }
 
 .box {
@@ -100,47 +95,46 @@ h1 {
   flex-flow: column;
   border-radius: 0.75rem;
   background: var(--box-color);
-  .box-text {
-    color: var(--mediumgrey-color);
-  }
+}
+.box .box-text {
+  color: var(--mediumgrey-color);
 }
 
 .invisible-box {
   display: flex;
   flex-flow: column;
   margin-right: 2.5rem;
-  &:last-child {
-    margin-right: 0;
-  }
-  .box-text {
-    color: var(--mediumgrey-color);
-  }
+}
+.invisible-box:last-child {
+  margin-right: 0;
+}
+.invisible-box .box-text {
+  color: var(--mediumgrey-color);
 }
 
 .logo-box {
   display: flex;
   align-items: center;
   cursor: pointer;
-  .logo-symbol {
-    background: var(--main-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    .logo-icon {
-      fill: white;
-      color: white;
-    }
-  }
-  .logo-text {
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: var(--dark-color);
-    //   display: none; // hide the line
-  }
-  &:hover {
-    opacity: 0.8;
-  }
+}
+.logo-box .logo-symbol {
+  background: var(--main-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo-box .logo-symbol .logo-icon {
+  fill: white;
+  color: white;
+}
+.logo-box .logo-text {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--dark-color);
+}
+.logo-box:hover {
+  opacity: 0.8;
 }
 
 /*
@@ -169,7 +163,7 @@ form {
       outline: none;
       border-color: var(--main-color);
     }
-    
+
     &:disabled {
      // border: 0.0625rem solid var(--alert-color);
       color: var(--darkgrey-color);
@@ -204,73 +198,69 @@ form {
   }
 }
 */
-
 form {
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
-  &:last-child {
-    margin-bottom: 0;
-  }
-  .form-field {
-    position: relative;
-    margin-bottom: 1rem;
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
-  .input-text {
-    padding: 0 1rem;
-    display: block;
-    width: 100%;
-    height: 3.125rem;
-    border: solid 0.0625rem var(--lightgrey-color);
-    border-radius: 0.75rem;
-    font-size: 1rem;
-    line-height: 1.375rem;
-    font-weight: 400;
-    &:focus {
-      outline: none;
-      border-color: var(--main-color);
-    }
-    &:focus,
-    &.not-empty {
-      + .label {
-        transform: translateY(-1.5rem);
-        font-size: 12px;
-      }
-    }
-    &:disabled {
-      color: var(--darkgrey-color);
-    }
-  }
-  .label {
-    position: absolute;
-    left: 1rem;
-    bottom: 0.875rem;
-    font-family: "Inter", sans-serif;
-    font-size: 1rem;
-    line-height: 1.375rem;
-    font-weight: 400;
-    color: var(--darkgrey-color);
-    cursor: text;
-    transition: transform 0.2s, font-size 0.2s;
-    &::before {
-      z-index: -1;
-      content: "";
-      position: absolute;
-      left: -0.25rem;
-      top: 0.25rem;
-      width: calc(100% + 0.5rem);
-      height: 1rem;
-      background: var(--box-color);
-    }
-  }
-  .submit-btn {
-    width: 100%;
-    max-width: auto !important;
-    height: 3.125rem;
-    margin-top: 1.875rem;
-  }
+}
+form:last-child {
+  margin-bottom: 0;
+}
+form .form-field {
+  position: relative;
+  margin-bottom: 1rem;
+}
+form .form-field:last-child {
+  margin-bottom: 0;
+}
+form .input-text {
+  padding: 0 1rem;
+  display: block;
+  width: 100%;
+  height: 3.125rem;
+  border: solid 0.0625rem var(--lightgrey-color);
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  line-height: 1.375rem;
+  font-weight: 400;
+}
+form .input-text:focus {
+  outline: none;
+  border-color: var(--main-color);
+}
+form .input-text:focus + .label, form .input-text.not-empty + .label {
+  transform: translateY(-1.5rem);
+  font-size: 12px;
+}
+form .input-text:disabled {
+  color: var(--darkgrey-color);
+}
+form .label {
+  position: absolute;
+  left: 1rem;
+  bottom: 0.875rem;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  line-height: 1.375rem;
+  font-weight: 400;
+  color: var(--darkgrey-color);
+  cursor: text;
+  transition: transform 0.2s, font-size 0.2s;
+}
+form .label::before {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  left: -0.25rem;
+  top: 0.25rem;
+  width: calc(100% + 0.5rem);
+  height: 1rem;
+  background: var(--box-color);
+}
+form .submit-btn {
+  width: 100%;
+  max-width: auto !important;
+  height: 3.125rem;
+  margin-top: 1.875rem;
 }
 
 select {
@@ -293,9 +283,9 @@ select {
   height: 2.5rem;
   overflow: hidden;
   flex: 0 0 5.0625rem;
-  .active {
-    color: var(--main-color);
-  }
+}
+.switch .active {
+  color: var(--main-color);
 }
 
 .switch-button {
@@ -305,16 +295,14 @@ select {
   color: var(--darkgrey-color);
   width: 2.5rem;
   border-right: 0.0625rem solid var(--lightgrey-color);
-  &:last-child {
-    border-right: 0;
-  }
   cursor: pointer;
-  &:hover {
-    background: rgba(0, 0, 0, 0.03);
-  }
 }
-
-// Login Page
+.switch-button:last-child {
+  border-right: 0;
+}
+.switch-button:hover {
+  background: rgba(0, 0, 0, 0.03);
+}
 
 .login-pg {
   padding: 3.75rem 2.5rem;
@@ -323,26 +311,24 @@ select {
   display: flex;
   flex-flow: column;
   align-items: center;
-  .logo-box {
-    margin-bottom: 3.75rem;
-    .logo-symbol {
-      width: 3.75rem;
-      height: 3.75rem;
-      border-radius: 0.5rem;
-      font-size: 2rem;
-    }
-    .logo-text {
-      margin-left: 1.25rem;
-      font-size: 1.5625rem;
-    }
-  }
-  .box {
-    width: 100%;
-    max-width: 23.375rem;
-  }
 }
-
-// Application Interface
+.login-pg .logo-box {
+  margin-bottom: 3.75rem;
+}
+.login-pg .logo-box .logo-symbol {
+  width: 3.75rem;
+  height: 3.75rem;
+  border-radius: 0.5rem;
+  font-size: 2rem;
+}
+.login-pg .logo-box .logo-text {
+  margin-left: 1.25rem;
+  font-size: 1.5625rem;
+}
+.login-pg .box {
+  width: 100%;
+  max-width: 23.375rem;
+}
 
 .app {
   display: flex;
@@ -351,8 +337,6 @@ select {
   width: 100vw;
   overflow: hidden;
 }
-
-// Layout Sizing
 
 .navbar {
   width: 100vw;
@@ -379,10 +363,9 @@ select {
 
 .sidebar-title-box,
 .content-sidebar ul {
-  width: 18rem; /* Same as .content-sidebar */
+  width: 18rem;
+  /* Same as .content-sidebar */
 }
-
-// Navigation Bar
 
 .navbar {
   z-index: 1;
@@ -392,96 +375,94 @@ select {
   display: flex;
   align-items: center;
   overflow-y: auto;
-  .logo-box-navbar {
-    padding: 0.625rem;
-    font-size: 1rem;
-    .logo-symbol {
-      width: 1.875rem;
-      height: 1.875rem;
-      border-radius: 0.5rem;
-    }
-    .logo-text {
-      margin-left: 0.625rem;
-    }
-  }
-  ul {
-    list-style-type: none;
-    display: flex;
-  }
-  .main-menu {
-    padding: 0 0.9375rem 0 1.25rem;
-    list-style-type: none;
-    display: flex;
-    li {
-      padding: 0.625rem;
-      font-size: 0.875rem;
-      font-weight: 600;
-      line-height: 1.875rem;
-      color: var(--darkgrey-color);
-      cursor: pointer;
-      &:hover {
-        opacity: 0.7;
-      }
-    }
-    .active {
-      color: var(--main-color);
-      &:hover {
-        opacity: 1;
-        cursor: default;
-      }
-    }
-  }
-  .user-menu {
-    margin-left: auto;
-    padding: 0 3.75rem 0 0.9875rem;
-    color: var(--darkgrey-color);
-    li {
-      padding: 0 0.5rem;
-      margin-right: 0.625rem;
-      &:last-child {
-        margin-right: 0;
-      }
-      display: flex;
-      align-items: center;
-      height: 2.25rem;
-      border: 0.0625rem solid var(--lightgrey-color);
-      border-radius: 0.5rem;
-      cursor: pointer;
-      i {
-        font-size: 1rem;
-        margin: 0 0.25rem;
-      }
-      div {
-        margin: 0 0.25rem;
-        font-size: 0.875rem;
-        font-weight: 400;
-        white-space: nowrap;
-      }
-      &:hover {
-        background: rgba(0, 0, 0, 0.03);
-      }
-    }
-    .language-select {
-      padding: 0 !important;
-      position: relative;
-      select {
-        padding: 0 1.75rem 0 0.75rem;
-        height: 100%;
-        background: none;
-        z-index: 1;
-      }
-      i {
-        position: absolute;
-        right: 0.4rem;
-      }
-    }
-  }
-  &::-webkit-scrollbar {
-    display: none;
-  }
 }
-
-// Content Box Elements
+.navbar .logo-box-navbar {
+  padding: 0.625rem;
+  font-size: 1rem;
+}
+.navbar .logo-box-navbar .logo-symbol {
+  width: 1.875rem;
+  height: 1.875rem;
+  border-radius: 0.5rem;
+}
+.navbar .logo-box-navbar .logo-text {
+  margin-left: 0.625rem;
+}
+.navbar ul {
+  list-style-type: none;
+  display: flex;
+}
+.navbar .main-menu {
+  padding: 0 0.9375rem 0 1.25rem;
+  list-style-type: none;
+  display: flex;
+}
+.navbar .main-menu li {
+  padding: 0.625rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.875rem;
+  color: var(--darkgrey-color);
+  cursor: pointer;
+}
+.navbar .main-menu li:hover {
+  opacity: 0.7;
+}
+.navbar .main-menu .active {
+  color: var(--main-color);
+}
+.navbar .main-menu .active:hover {
+  opacity: 1;
+  cursor: default;
+}
+.navbar .user-menu {
+  margin-left: auto;
+  padding: 0 3.75rem 0 0.9875rem;
+  color: var(--darkgrey-color);
+}
+.navbar .user-menu li {
+  padding: 0 0.5rem;
+  margin-right: 0.625rem;
+  display: flex;
+  align-items: center;
+  height: 2.25rem;
+  border: 0.0625rem solid var(--lightgrey-color);
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+.navbar .user-menu li:last-child {
+  margin-right: 0;
+}
+.navbar .user-menu li i {
+  font-size: 1rem;
+  margin: 0 0.25rem;
+}
+.navbar .user-menu li div {
+  margin: 0 0.25rem;
+  font-size: 0.875rem;
+  font-weight: 400;
+  white-space: nowrap;
+}
+.navbar .user-menu li:hover {
+  background: rgba(0, 0, 0, 0.03);
+}
+.navbar .user-menu .language-select {
+  padding: 0 !important;
+  position: relative;
+}
+.navbar .user-menu .language-select select {
+  padding: 0 1.75rem 0 0.75rem;
+  height: 100%;
+  background: none;
+  z-index: 1;
+}
+.navbar .user-menu .language-select i {
+  position: absolute;
+  right: 0.4rem;
+}
+.navbar::-webkit-scrollbar {
+  display: none;
+}
 
 .content-sidebar {
   color: var(--box-color);
@@ -491,59 +472,59 @@ select {
   display: flex;
   flex-flow: column;
   align-items: flex-end;
-  &::-webkit-scrollbar {
-    display: none;
-  }
-  i {
-    padding: 1rem 0;
-    width: 3.75rem;
-    text-align: center;
-    font-size: 1.25rem;
-    line-height: 1.25rem;
-  }
-  .sidebar-title-box {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 1.5rem;
-    padding: 0.75rem 0;
-    letter-spacing: 0.05em;
-    cursor: pointer;
-    &:hover {
-      background: var(--light-color);
-    }
-  }
-  .sidebar-title {
-    text-transform: uppercase;
-    font-size: 1rem;
-    font-weight: 500;
-    line-height: 1.25rem;
-    padding: 1rem 0 1rem 1.25rem;
-  }
-  ul {
-    list-style-type: none;
-    margin-bottom: 1.5rem;
-    li {
-      display: flex;
-      justify-content: space-between;
-      cursor: pointer;
-      div {
-        font-weight: 500;
-        line-height: 1.25rem;
-        padding: 1rem 0 1rem 2.5rem;
-      }
-      &:hover {
-        background: var(--light-color);
-      }
-    }
-    .active {
-      background: var(--body-color);
-      color: var(--darkgrey-color);
-      &:hover {
-        background: var(--body-color);
-        cursor: default;
-      }
-    }
-  }
+}
+.content-sidebar::-webkit-scrollbar {
+  display: none;
+}
+.content-sidebar i {
+  padding: 1rem 0;
+  width: 3.75rem;
+  text-align: center;
+  font-size: 1.25rem;
+  line-height: 1.25rem;
+}
+.content-sidebar .sidebar-title-box {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  padding: 0.75rem 0;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+}
+.content-sidebar .sidebar-title-box:hover {
+  background: var(--light-color);
+}
+.content-sidebar .sidebar-title {
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.25rem;
+  padding: 1rem 0 1rem 1.25rem;
+}
+.content-sidebar ul {
+  list-style-type: none;
+  margin-bottom: 1.5rem;
+}
+.content-sidebar ul li {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.content-sidebar ul li div {
+  font-weight: 500;
+  line-height: 1.25rem;
+  padding: 1rem 0 1rem 2.5rem;
+}
+.content-sidebar ul li:hover {
+  background: var(--light-color);
+}
+.content-sidebar ul .active {
+  background: var(--body-color);
+  color: var(--darkgrey-color);
+}
+.content-sidebar ul .active:hover {
+  background: var(--body-color);
+  cursor: default;
 }
 
 .content-tab {
@@ -551,9 +532,9 @@ select {
   overflow: auto;
   display: flex;
   flex-flow: column;
-  .box {
-    width: 100%;
-  }
+}
+.content-tab .box {
+  width: 100%;
 }
 
 .row {
@@ -562,56 +543,55 @@ select {
   display: flex;
   width: 100%;
   min-width: 32rem;
-  max-width: 64rem; /* erase for unlimited width */
-  &:last-child {
-    margin-bottom: 0;
-  }
-  .box {
-    flex: 1;
-    margin-right: 2.5rem;
-    &:last-child {
-      margin-right: 0;
-    }
-  }
-  > .button {
-    margin-left: auto;
-  }
+  max-width: 64rem;
+  /* erase for unlimited width */
 }
-
-// Hide innactive pages
+.row:last-child {
+  margin-bottom: 0;
+}
+.row .box {
+  flex: 1;
+  margin-right: 2.5rem;
+}
+.row .box:last-child {
+  margin-right: 0;
+}
+.row > .button {
+  margin-left: auto;
+}
 
 #app {
   display: none;
 }
-// Overview page
+
 #overview-pg {
   display: flex;
 }
 
-// Administration page
 #administration-pg {
   display: none;
 }
+
 #usermanagement-tab {
   display: flex;
 }
+
 #rolespermissions-tab {
   display: none;
 }
+
 #settings-tab {
   display: none;
 }
+
 #loremipsum-tab {
   display: none;
 }
 
-// User settings page
 #usersettings-pg {
   display: none;
 }
 
-// Hide Logo type
 .logo-text {
   display: none;
 }
-
